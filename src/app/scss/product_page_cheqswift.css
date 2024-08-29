@@ -1,0 +1,105 @@
+.product_page h1 {
+  color: #231F20 !important;
+}
+
+.innderWrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.innderWrapper .keyFuture {
+  text-align: center;
+  padding-bottom: 100px;
+  padding-top: 164px;
+}
+.innderWrapper .keyFuture .effortLessHeading {
+  font-size: 42px;
+}
+.innderWrapper .productTop {
+  padding-top: 130px;
+}
+.innderWrapper .effortLessHeading {
+  padding-top: 81px;
+}
+.innderWrapper .career-Para {
+  padding-top: 70px;
+}
+.innderWrapper .exploreHeading {
+  font-size: 24px;
+  padding-top: 20px !important;
+}
+
+.platformMain {
+  padding-top: 164px;
+  padding-bottom: 10%;
+}
+.platformMain .paraPlatformText {
+  padding-top: 70px;
+}
+.platformMain h1 {
+  font-size: 64px !important;
+  font-family: "metropolisbold";
+}
+.career .banner .banner-text {
+  display: block;
+  font-family: "metropolisbold";
+  line-height: 70px;
+}
+
+.exploreHeading {
+  font-size: 64px !important;
+  text-align: center;
+  margin-top: 164px;
+  font-family: "metropolisbold";
+}
+
+@media only screen and (max-width: 768px) {
+  .career .banner .banner-text {
+    display: block;
+    font-family: "metropolisbold";
+    line-height: 40px;
+  }
+}
+@media only screen and (max-width: 667px) {
+  .exploreHeading {
+    font-size: 31px !important;
+    text-align: center;
+    margin-top: 20px;
+    font-family: "metropolisbold";
+  }
+  .platformMain h1 {
+    font-size: 32px !important;
+    font-family: "metropolisbold";
+    text-align: center;
+  }
+  .innderWrapper .career-Para {
+    padding-top: 10px;
+  }
+  .innderWrapper .keyFuture {
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 30px;
+  }
+  .innderWrapper .effortLessHeading {
+    padding-top: 10px;
+  }
+  .innderWrapper .careerContent .careerText {
+    font-size: 18px;
+    color: #231F20;
+    padding-top: 0;
+    line-height: 26px;
+    font-family: "Metropolis-Regular" !important;
+  }
+  .innderWrapper .productTop {
+    padding-top: 10px;
+  }
+  .platformMain {
+    padding-top: 20px;
+    padding-bottom: 0;
+  }
+  .platformMain .paraPlatformText {
+    padding-top: 20px;
+  }
+  .platformMain img {
+    padding-top: 40px !important;
+  }
+}

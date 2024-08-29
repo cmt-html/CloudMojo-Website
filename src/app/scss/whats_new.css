@@ -1,0 +1,219 @@
+.whatsNew {
+  padding-top: 183px;
+}
+.whatsNew h1 {
+  font-size: 89px;
+  color: #1128A4;
+  font-family: "metropolisbold";
+  text-align: center;
+}
+.whatsNew p {
+  color: #231F20;
+  font-family: "metropolismedium";
+  font-size: 20px;
+  margin: 0;
+  padding-bottom: 85px;
+  text-align: center;
+  line-height: 24px;
+}
+.whatsNew .searchWhatsNew {
+  margin-top: 56px;
+  width: 348px;
+  position: relative;
+  margin: 0 auto;
+}
+.whatsNew .searchWhatsNew input {
+  border: 1px solid #231F20;
+  border-radius: 25px;
+  padding: 10px;
+  outline: none;
+  height: 48px;
+  width: 368px;
+  background-color: transparent;
+}
+.whatsNew .searchWhatsNew .searchIcon {
+  position: absolute;
+  top: 12px;
+  right: -12px;
+}
+
+.showcase {
+  padding-top: 165px;
+}
+.showcase ul {
+  padding: 0;
+  text-align: center;
+}
+.showcase ul li:first-child {
+  border-bottom: 3px solid #013EE6;
+}
+.showcase ul li {
+  list-style: none;
+  padding: 10px 35px;
+  display: inline-block;
+  color: #D8D8D8;
+  cursor: pointer;
+}
+
+.showcaseDetails {
+  padding-top: 29px;
+}
+.showcaseDetails .textCenterLine {
+  text-align: center;
+  display: block;
+  margin: 40px auto;
+}
+.showcaseDetails .dateText {
+  font-size: 20px;
+  color: #ABABAB;
+  font-family: "metropolismedium";
+  display: block;
+  padding-bottom: 18px;
+}
+.showcaseDetails p {
+  font-family: "metropolismedium";
+  color: #231F20;
+  font-size: 32px;
+  line-height: 32px;
+}
+.showcaseDetails button {
+  text-align: center;
+  background-color: #013EE6;
+  padding: 10px;
+  border: 0;
+  border-radius: 34px;
+  color: #fff;
+  padding: 10px 0px;
+  display: block;
+  font-family: "metropolissemi_bold";
+  margin-top: 205px;
+  width: 185px;
+  float: left;
+}
+
+@media only screen and (max-width: 768px) {
+  .showcaseDetails p {
+    font-family: "metropolismedium";
+    color: #231F20;
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .showcaseDetails button {
+    margin-top: 70px;
+  }
+  .showcase {
+    padding-top: 46px;
+  }
+  .whatsNew h1 {
+    font-size: 32px;
+    color: #1128A4;
+    font-family: "metropolisbold";
+    text-align: center;
+    line-height: 67px;
+  }
+}
+@media only screen and (max-width: 667px) {
+  .whatsNew {
+    padding-top: 101px;
+  }
+  .whatsNew h1 {
+    font-size: 24px;
+    color: #1128A4;
+    font-family: "metropolisbold";
+    text-align: center;
+  }
+  .whatsNew p {
+    padding-bottom: 37px;
+  }
+  .whatsNew .searchWhatsNew input {
+    border: 1px solid #231F20;
+    border-radius: 25px;
+    padding: 10px;
+    outline: none;
+    height: 48px;
+    width: 304px;
+    background-color: transparent;
+    margin: 0 auto;
+    display: block;
+  }
+  .whatsNew .searchWhatsNew .searchIcon {
+    position: absolute;
+    top: 12px;
+    right: 35px;
+  }
+  .whatsNew .searchWhatsNew {
+    margin-top: 56px;
+    width: 303px;
+    position: relative;
+    margin: 0 auto;
+  }
+  .showcase {
+    padding-top: 30px;
+  }
+  .showcaseDetails .dateText {
+    font-size: 18px;
+    color: #ABABAB;
+    font-family: "metropolismedium";
+    display: block;
+    padding-bottom: 18px;
+  }
+  .showcaseDetails button {
+    margin-bottom: 40px;
+    margin-top: 30px;
+  }
+  .showcaseDetails p {
+    font-family: "metropolismedium";
+    color: #231F20;
+    font-size: 17px;
+    line-height: 24px;
+  }
+  .showcase ul li {
+    list-style: none;
+    padding: 10px 13px;
+    display: inline-block;
+    color: #D8D8D8;
+    cursor: pointer;
+  }
+}
+.innerTop {
+  padding-top: 70px;
+  padding-bottom: 14%;
+}
+
+.buttonNews {
+  text-align: center;
+  background-color: #FFFFFF;
+  padding: 10px;
+  border: 0;
+  border-radius: 34px;
+  padding: 10px 0px;
+  display: block;
+  font-family: "metropolissemi_bold";
+  margin-top: 205px;
+  box-shadow: -2px 3px 10px 0px rgba(191, 191, 191, 0.2509803922);
+  border: 1px solid #EBEBEB;
+  width: 185px;
+  margin: 15% auto 0 auto;
+}
+
+.buttonblog {
+  text-align: center;
+  background-color: #FFFFFF;
+  padding: 10px;
+  border: 0;
+  border-radius: 34px;
+  padding: 10px 0px;
+  display: block;
+  font-family: "metropolissemi_bold";
+  margin-top: 205px;
+  box-shadow: -2px 3px 10px 0px rgba(191, 191, 191, 0.2509803922);
+  border: 1px solid #EBEBEB;
+  width: 185px;
+  margin: 4% auto 6% auto !important;
+}
+
+.gradient {
+  background: -webkit-linear-gradient(269.78deg, #013EE6 36.01%, #3DE7FF 134.38%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

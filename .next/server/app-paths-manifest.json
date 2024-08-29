@@ -1,0 +1,8 @@
+{
+  "/page": "app/page.js",
+  "/about/page": "app/about/page.js",
+  "/blog/page": "app/blog/page.js",
+  "/cloudMojo_services_rocketSeed/page": "app/cloudMojo_services_rocketSeed/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/career/page": "app/career/page.js"
+}

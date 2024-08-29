@@ -1,0 +1,294 @@
+.leaderShipTop {
+  padding-top: 160px;
+}
+.leaderShipTop p {
+  font-family: "metropolissemi_bold";
+  font-size: 32px;
+}
+.leaderShipTop .leadership_heading {
+  font-family: "metropolisbold";
+  font-size: 90px;
+  line-height: 50px;
+}
+.leaderShipTop .leadership_heading .name {
+  color: #013EE6;
+}
+.leaderShipTop .leaderShipMain {
+  max-width: 1061px;
+}
+.leaderShipTop .leaderShipMain .leaderShipInner {
+  display: flex;
+  padding-top: 73px;
+}
+.leaderShipTop .leaderShipMain .leaderShipInner .readmore {
+  color: #013EE6;
+  font-family: "metropolissemi_bold";
+  padding-top: 40px;
+  cursor: pointer;
+}
+.leaderShipTop .leaderShipMain .leaderShipContent {
+  max-width: 600px;
+  margin-right: 141px;
+}
+.leaderShipTop .leaderShipMain .leaderShipImg {
+  max-width: 600px;
+}
+.leaderShipTop .leaderShipMain .social-img {
+  padding-top: 18px;
+}
+.leaderShipTop .leaderShipMain .social-img .linkkedin-2 {
+  padding-right: 20px;
+}
+
+.leadershipMainPage {
+  padding-top: 164px;
+}
+
+.blog {
+  background: linear-gradient(180deg, #F4F9FF 84.49%, #FFFFFF 100%);
+  margin-top: 164px;
+}
+.blog .blogCard {
+  position: relative;
+  width: 30%;
+}
+.blog .blogMain {
+  display: flex;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+.blog .blogMain .blogCard-1 {
+  margin-top: 182px;
+  margin-right: 140px;
+  position: relative;
+  width: 100%;
+}
+.blog .blogMain .blogCard-2 {
+  position: relative;
+  width: 100%;
+  margin-top: 0;
+}
+.blog h1 {
+  color: #013EE6;
+  font-family: "metropolissemi_bold";
+  font-size: 48px;
+  padding-top: 52px;
+}
+.blog .blogPara-1 {
+  background-color: #fff;
+  position: absolute;
+  right: -54px;
+  bottom: -187px;
+  padding: 30px;
+  height: 269px;
+}
+.blog .blogPara-1 .text {
+  font-size: 32px;
+  color: #231F20;
+  font-family: "metropolismedium";
+  line-height: 32px;
+}
+.blog .blogPara-1 p {
+  font-family: "metropolissemi_bold";
+  font-size: 24px;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 0px;
+  margin-bottom: 49px;
+}
+.blog .blogPara-1 p span {
+  color: #9D9B9C !important;
+  font-size: 18px;
+}
+
+.blogPara-2 {
+  background-color: #fff;
+  position: absolute;
+  right: -54px;
+  bottom: 0px;
+  height: 269px;
+  padding: 30px;
+}
+
+.text {
+  font-size: 32px;
+  color: #231F20;
+  font-family: "metropolismedium";
+  line-height: 32px;
+}
+
+p {
+  font-family: "metropolissemi_bold";
+  font-size: 24px;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 0px;
+  margin-bottom: 49px;
+}
+p span {
+  color: #9D9B9C !important;
+  font-size: 18px;
+}
+
+.webinarsTop {
+  padding-top: 184px;
+  padding-bottom: 20%;
+}
+.webinarsTop .blogPara-1 .text {
+  font-size: 32px;
+  color: #231F20;
+  font-family: "metropolismedium";
+  line-height: 32px;
+}
+.webinarsTop .blogPara-1 p {
+  font-family: "metropolissemi_bold";
+  font-size: 24px;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 0px;
+  margin-bottom: 49px;
+}
+.webinarsTop .blogPara-1 p span {
+  color: #9D9B9C !important;
+  font-size: 18px;
+}
+.webinarsTop .blogPara-2 .text {
+  font-size: 32px;
+  color: #231F20;
+  font-family: "metropolismedium";
+  line-height: 32px;
+}
+.webinarsTop .blogPara-2 p {
+  font-family: "metropolissemi_bold";
+  font-size: 24px;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 0px;
+  margin-bottom: 49px;
+}
+.webinarsTop .blogPara-2 p span {
+  color: #9D9B9C !important;
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 768px) {
+  .blog .blogPara-1 .text {
+    font-size: 24px;
+    color: #231F20;
+    font-family: "metropolismedium";
+    line-height: 32px;
+  }
+  .blog .blogMain .blogCard-1 {
+    margin-top: 0;
+    margin-right: 140px;
+    position: relative;
+    width: 100%;
+  }
+  .leadershipMainPage {
+    padding-top: 20px;
+  }
+  .leaderShipTop .leaderShipMain .leaderShipContent {
+    max-width: 360px;
+    margin-right: 76px;
+  }
+  .leaderShipTop .leadership_heading {
+    font-size: 48px;
+  }
+  .leaderShipTop {
+    padding-top: 110px;
+  }
+  .leaderShipTop .leaderShipMain .leaderShipInner {
+    display: flex;
+    padding-top: 4px;
+  }
+}
+@media only screen and (max-width: 667px) {
+  .webinarsTop .blogPara-2 .text {
+    font-size: 18px;
+    color: #231F20;
+    font-family: "metropolismedium";
+    line-height: 24px;
+  }
+  .headingLeadership {
+    padding-top: 120px;
+  }
+  .leaderShipTop .leadership_heading {
+    font-family: "metropolisbold";
+    font-size: 28px;
+    line-height: 14px;
+  }
+  header {
+    position: absolute;
+    z-index: 9;
+    width: 100%;
+    background: #fff;
+  }
+  .leaderShipTop .leaderShipMain .leaderShipInner {
+    display: block;
+    padding-top: 0px;
+  }
+  .leaderShipTop .leaderShipMain .leaderShipContent {
+    width: 100%;
+    margin-right: 0;
+  }
+  .leaderShipTop .leaderShipMain .leaderShipInner .readmore {
+    padding-bottom: 20px;
+  }
+  .leadershipMainPage {
+    padding-top: 40px;
+  }
+  .blog .blogPara-1 {
+    background-color: #fff;
+    position: relative;
+    right: 0;
+    bottom: 0;
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  .blog .blogMain {
+    display: block;
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+  .webinarsTop {
+    padding-top: 20px;
+    padding-bottom: 0;
+  }
+  .leaderShipTop {
+    padding-top: 0;
+  }
+  .leaderShipTop p {
+    font-family: "metropolissemi_bold";
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .blog {
+    background: linear-gradient(180deg, #F4F9FF 84.49%, #FFFFFF 100%);
+    margin-top: 20px;
+  }
+  .blog .blogMain .blogCard-1 {
+    margin-top: 11px;
+    margin-right: 140px;
+    position: relative;
+    width: 100%;
+  }
+  .blog h1 {
+    color: #013EE6;
+    font-family: "metropolissemi_bold";
+    font-size: 32px;
+    padding-top: 52px;
+  }
+  .blog .blogPara-1 .text {
+    font-size: 18px;
+    color: #231F20;
+    font-family: "metropolismedium";
+    line-height: 26px;
+  }
+  .blogPara-2 {
+    background-color: #fff;
+    position: relative;
+    right: 0;
+    bottom: 0px;
+    padding: 15px;
+  }
+}

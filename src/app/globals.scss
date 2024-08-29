@@ -1,0 +1,520 @@
+@charset "UTF-8";
+@import url("./scss/reset.css");
+@import url("./scss/home.css");
+@import url("./scss/about.css");
+@import url("./scss/career.css");
+@import url("./scss/leadership.css");
+@import url("./scss/whats_new.css");
+@import url("./scss/contact_us.css");
+@import url("./scss/blog.css");
+@import url("./scss/product_page.css");
+@import url("./scss/product_page_cheqswift.css");
+@import url("./scss/manage_services.css");
+@import url("./scss/product_page_d-jinn.css");
+@import url("./scss/product_page_rockvault.css");
+@import url("./scss/Manage_cloud_services.css");
+@import url("./scss/cloudMojo_services_rocketSeed.css");
+@import url("bootstrap/dist/css/bootstrap.min.css");
+@font-face {
+    font-family: 'metropolisblack';
+    src: url("./fonts/Metropolis-Black.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'metropolisblack_italic';
+    src: url("./fonts/Metropolis-BlackItalic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'metropolisbold';
+    src: url("./fonts/Metropolis-Bold.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'metropolissemi_bold';
+    src: url("./fonts/Metropolis-SemiBold.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'metropolisbold_italic';
+    src: url("./fonts/Metropolis-BoldItalic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'metropolisextra_bold';
+    src: url("./fonts/Metropolis-ExtraBold.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'metropolisextra_bold_italic';
+    src: url("./fonts/Metropolis-ExtraBoldItalic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'metropolisextra_light';
+    src: url("./fonts/Metropolis-ExtraLight.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'metropolisextra_light_italic';
+    src: url("./fonts/Metropolis-ExtraLightItalic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'metropolislight';
+    src: url("./fonts/Metropolis-Light.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'metropolislight';
+    src: url("./fonts/Metropolis-Light.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'metropolismedium';
+    src: url("./fonts/Metropolis-Medium.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'metropolismedium_italic';
+    src: url("./fonts/Metropolis-SemiBoldItalic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Metropolis-Regular';
+    src: url("./fonts/Metropolis-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    overflow-y: hidden;
+    font-family: 'Metropolis-Regular' !important;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+    max-width: 1400px;
+    width: 100%;
+}
+
+header {
+    position: absolute;
+    z-index: 9;
+    width: 100%;
+    .icon {
+        float: right;
+        top: 10px;
+        margin-top: 12px;
+        background: #013EE6;
+        border-radius: 29px;
+        padding: 6px;
+        cursor: pointer;
+    }
+    .cross-icon {
+        float: right;
+        top: 10px;
+        margin-top: 4px;
+        background: #013EE6;
+        border-radius: 29px;
+        padding: 14px;
+        cursor: pointer;
+        z-index: 99;
+        right: 67px;
+        position: relative;
+    }
+    .header-top {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .side-bar {
+        background: #fff;
+        position: absolute;
+        transition: transform 1s ease-in-out;
+        width: 454px !important;
+        top: 0;
+        width: 100%;
+        right: 0px;
+        height: 1208px;
+        transform: translate(596px);
+        box-shadow: 1px -2px 12px #ccc;
+        border-radius: 11px 0px 0px 12px;
+        .navbar {
+            .menu-bar {
+                padding: 0;
+                width: 100%;
+                margin-left: 90px;
+                margin-top: 154px;
+                li {
+                    list-style-type: none;
+                    margin: 20px 0px;
+                    ul {
+                        li {
+                            a {
+                                font-size: 24px;
+                            }
+                        }
+                    }
+                    a {
+                        text-decoration: underline;
+                        color: #0C0C0C;
+                        font-family: 'metropolissemi_bold';
+                        font-size: 28px;
+                    }
+                }
+            }
+        }
+        .social-icon-nav {
+            ul {
+                margin-bottom: 32px;
+                padding: 0;
+                margin-left: 90px;
+                li {
+                    list-style-type: none;
+                    display: inline-block;
+                    margin: 0px 10px;
+                }
+            }
+        }
+    }
+    .active {
+        right: -480px;
+        position: absolute;
+    }
+}
+
+.wrapper {
+    height: 800px;
+}
+
+footer {
+    .get-in-toch-button {
+        text-align: right;
+        background-color: #013EE6;
+        padding: 10px;
+        border: 0;
+        border-radius: 34px;
+        color: #fff;
+        padding: 10px 20px;
+        display: block;
+        font-family: 'metropolissemi_bold';
+        margin-top: 86px;
+        width: 185px;
+        float: right;
+        span {
+            margin-left: 10px;
+            display: inline-block;
+        }
+    }
+    h1 {
+        font-size: 80px;
+        color: #231F20;
+        font-family: 'metropolisbold';
+        line-height: 72px;
+    }
+    .contacts {
+        padding: 56px 0px 49px 0px;
+        margin-top: 143px;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        p {
+            margin: 0;
+            font-family: 'Metropolis-Regular';
+            font-size: 16px;
+        }
+        .emailId {
+            font-size: 32px;
+            color: #231F20;
+            font-family: 'metropolismedium';
+        }
+        .mobileNo {
+            font-size: 32px;
+            color: #231F20;
+            font-family: 'metropolismedium';
+        }
+        .fotter-text-right {
+            text-align: right;
+        }
+    }
+}
+
+.footer-bg {
+    background: url("../../public/images/footer-bg.png") no-repeat;
+    background-size: 100% 100%;
+    height: 68vh;
+    margin-top: 74px;
+    .top-to-bottom {
+        margin-top: 144px;
+    }
+    .footer-text {
+        padding: 0px 70px;
+        .footer-text-inner {
+            padding-top: 0px;
+            h1 {
+                color: #013EE6;
+                margin: 0;
+                font-size: 42px;
+                font-family: 'metropolissemi_bold';
+            }
+            p {
+                font-size: 20px;
+                font-family: 'metropolismedium';
+                margin: 0;
+                color: #231F20;
+            }
+            .search-box {
+                margin-top: 56px;
+                width: 348px;
+                position: relative;
+                input {
+                    border: 1px solid #231F20;
+                    border-radius: 25px;
+                    padding: 10px;
+                    outline: none;
+                    height: 48px;
+                    width: 368px;
+                    background-color: transparent;
+                }
+                 ::placeholder {
+                    font-family: 'metropolismedium';
+                }
+                .searchIcon {
+                    position: absolute;
+                    top: 12px;
+                    right: 0;
+                }
+            }
+        }
+    }
+    .bottom-footer {
+        a {
+            text-decoration: none;
+        }
+        .top-text {
+            font-size: 16px;
+            font-family: 'metropolissemi_bold';
+            color: #fff;
+            position: relative;
+            top: 2px;
+            left: 10px;
+        }
+    }
+    .line-top {
+        height: 2px;
+    }
+    .footer-social-iocn {
+        padding-top: 74px;
+        .social-icon {
+            ul {
+                display: flex;
+                justify-content: end;
+                li {
+                    padding: 0px 13px;
+                    list-style-type: none;
+                    display: inline-block;
+                    .whats-app {
+                        background: url("../../public/images/whatsappicon.png") no-repeat;
+                        width: 38px;
+                        height: 38px;
+                        display: inline-block;
+                    }
+                    .twitter {
+                        background: url("../../public/images/twittericon.png") no-repeat;
+                        width: 38px;
+                        display: inline-block;
+                        height: 38px;
+                    }
+                    .linkedin {
+                        background: url("../../public/images/linkedinicon.png") no-repeat;
+                        width: 38px;
+                        display: inline-block;
+                        height: 38px;
+                    }
+                    .facebook {
+                        background: url("../../public/images/facebookicon.png") no-repeat;
+                        width: 38px;
+                        height: 38px;
+                        display: inline-block;
+                    }
+                    .instagram {
+                        background: url("../../public/images/instagramicon.png") no-repeat;
+                        width: 38px;
+                        height: 38px;
+                        display: inline-block;
+                    }
+                    .youtube {
+                        background: url("../../public/images/youtubeicon.png") no-repeat;
+                        width: 38px;
+                        height: 38px;
+                        display: inline-block;
+                    }
+                    a {
+                        text-decoration: none;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    .copy-right-text {
+        padding-top: 40px;
+        ul {
+            padding: 0;
+            li {
+                .copyrightIcon {
+                    background: url("../../public/images/arrow-copyright.png") no-repeat;
+                    width: 24px;
+                    height: 19px;
+                    display: inline-block;
+                    position: relative;
+                    top: 4px;
+                }
+                list-style: none;
+                display: inline-block;
+                a {
+                    font-family: 'metropolissemi_bold';
+                    font-size: 16px;
+                    text-decoration: none;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .copy-right {
+        font-size: 18px;
+        text-align: right;
+        color: #fff;
+    }
+}
+
+.activeMenu {
+    transition: transform 9s ease-in;
+    user-select: none;
+    transform: translate(0px) !important;
+}
+
+@media only screen and (max-width:1440px) {
+    footer h1 {
+        font-size: 52px;
+        color: #231F20;
+        font-family: "metropolisbold";
+        line-height: 60px;
+    }
+    .footer-bg {
+        background: url("../../public/images/footer-bg.png") no-repeat;
+        background-size: 100% 100%;
+        height: 100vh;
+        margin-top: 74px;
+        .top-to-bottom {
+            margin-top: 144px;
+        }
+    }
+}
+
+@media only screen and (max-width:768px) {
+    footer h1 {
+        font-size: 36px;
+        color: #231F20;
+        font-family: "metropolisbold";
+        line-height: 35px;
+    }
+}
+
+@media only screen and (max-width:667px) {
+    header .side-bar {
+        width: auto !important;
+    }
+    header .side-bar .navbar .menu-bar {
+        padding: 0;
+        width: 100%;
+        margin-left: 32px;
+        margin-top: 68px;
+    }
+    header .side-bar .social-icon-nav ul {
+        margin-bottom: 32px;
+        padding: 0;
+        margin-left: 51px;
+    }
+    header .cross-icon {
+        right: 19px;
+    }
+    .footer-bg .footer-social-iocn .social-icon ul li {
+        padding: 0px 5px;
+    }
+    .footer-bg .footer-text .footer-text-inner p {
+        font-size: 16px;
+    }
+    .footer-bg .footer-text .footer-text-inner .search-box {
+        margin-top: 56px;
+        width: 276px;
+    }
+    .footer-bg .footer-text .footer-text-inner .search-box input {
+        width: 296px;
+    }
+    .footer-bg .footer-text .footer-text-inner h1 {
+        font-size: 26px;
+    }
+    footer h1 {
+        font-size: 24px;
+        line-height: 36px;
+    }
+    footer .contacts .mobileNo {
+        font-size: 20px;
+    }
+    .footer-bg .footer-text {
+        padding: 0px 20px;
+    }
+    footer .contacts .emailId {
+        font-size: 18px;
+    }
+    .copy-right p {
+        font-size: 14px;
+    }
+    header .active {
+        right: 0;
+        display: none;
+        position: absolute;
+    }
+    footer .get-in-toch-button {
+        margin-top: 0px;
+    }
+    footer .contacts {
+        margin-top: 40px;
+    }
+}

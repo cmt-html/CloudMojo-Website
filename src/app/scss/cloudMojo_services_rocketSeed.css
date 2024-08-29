@@ -1,0 +1,575 @@
+.product_page {
+  margin: 0 auto;
+  max-width: 1300px;
+}
+.product_page h1 {
+  text-align: left;
+  font-size: 64px;
+  line-height: 58px;
+  color: #231F20;
+  font-family: "metropolissemi_bold" !important;
+}
+
+.regular_text {
+  font-family: "Metropolis-Regular";
+  line-height: 24px;
+  color: #666363;
+  font-size: 24px !important;
+}
+
+.rocketSeed {
+  padding-top: 164px;
+  margin: 0 auto;
+  max-width: 1300px;
+}
+.rocketSeed h1 {
+  text-align: left;
+  font-size: 64px;
+  line-height: 58px;
+  color: #231F20;
+  font-family: "metropolissemi_bold";
+}
+.rocketSeed p {
+  font-family: "Metropolis-Regular";
+}
+.rocketSeed ul {
+  padding: 0;
+  max-width: 1300px;
+  display: flex;
+  margin: 0 auto;
+}
+.rocketSeed ul .top-align {
+  top: -60px;
+  position: relative;
+}
+.rocketSeed ul li {
+  display: block;
+  list-style: none;
+  box-shadow: 0px 4px 10px 0px rgba(72, 158, 255, 0.5490196078);
+  width: 336px;
+  padding: 0px 13px 40px 31px;
+  font-family: "Metropolis-Regular";
+  margin-right: 95px;
+  font-size: 18px;
+  border-radius: 12px;
+  margin-top: 95px;
+  justify-content: center;
+  align-items: center;
+}
+.rocketSeed ul li p {
+  font-family: "Metropolis-Regular";
+  font-size: 18px;
+  line-height: 26px;
+}
+.rocketSeed ul li h2 {
+  font-size: 32px;
+  font-family: "metropolissemi_bold";
+  margin-bottom: 10px;
+  line-height: 32px;
+}
+.rocketSeed ul li img {
+  padding: 29px 0px 24px 0px;
+}
+
+.manageService {
+  max-width: 1200px !important;
+  margin: 0 auto;
+}
+.manageService .keyFuture {
+  text-align: center;
+  padding-bottom: 100px;
+  padding-top: 164px;
+}
+.manageService .keyFuture .effortLessHeading {
+  font-size: 42px;
+}
+.manageService .productTop {
+  padding-top: 130px;
+}
+.manageService .effortLessHeading {
+  padding-top: 81px;
+}
+.manageService .career-Para {
+  padding-top: 70px;
+}
+.manageService .exploreHeading {
+  font-size: 24px;
+  padding-top: 20px !important;
+}
+.manageService .colorNumber {
+  color: #C8C7C7;
+  font-family: "Metropolis-Regular";
+  font-size: 32px;
+}
+.manageService .number {
+  font-size: 32px;
+  font-family: "Metropolis-Regular";
+}
+.manageService .manage_services_box ul {
+  padding: 0;
+}
+.manageService .manage_services_box ul li:first-child {
+  list-style: none;
+  font-size: 42px;
+  color: #013EE6;
+  line-height: 55px;
+}
+.manageService .manage_services_box ul li {
+  list-style: none;
+  font-size: 42px;
+  color: #C8C7C7;
+}
+.manageService .manageRightBox {
+  border: 1px solid rgba(72, 158, 255, 0.1607843137);
+  box-shadow: 0px 4px 10px 0px rgba(72, 158, 255, 0.5490196078);
+  padding: 45px 35px 45px 55px;
+  border-radius: 24px;
+  height: 599px;
+  max-width: 600px;
+  float: right;
+}
+.manageService .manageRightBox ul {
+  padding: 0;
+}
+.manageService .manageRightBox ul li:last-child {
+  border: none;
+}
+.manageService .manageRightBox ul li {
+  list-style: none;
+  font-size: 18px;
+  border-bottom: 1px solid #B7DEFF;
+  padding-top: 20px;
+}
+.manageService .manageRightBox ul li .manageBoxList {
+  display: block;
+  font-family: "metropolissemi_bold";
+  font-size: 18px;
+  color: #231F20;
+}
+.manageService .manageRightBox ul li p {
+  font-family: "Metropolis-Regular";
+  font-size: 18px;
+}
+
+.platformMain {
+  padding-top: 164px;
+  padding-bottom: 10%;
+}
+.platformMain .paraPlatformText {
+  padding-top: 70px;
+}
+.platformMain h1 {
+  font-size: 64px !important;
+  font-family: "metropolisbold";
+}
+
+.career .banner .banner-text {
+  display: block;
+  font-family: "metropolisbold";
+  line-height: 70px;
+}
+
+.exploreHeading {
+  font-size: 64px !important;
+  text-align: left;
+  margin-top: 164px;
+  font-family: "metropolissemi_bold";
+}
+
+.empowerBuiness {
+  background: radial-gradient(55.41% 55.41% at 50.03% 44.59%, #F6FBFF 0%, #D1EBFC 94.8%);
+  padding: 58px 78px 100px 78px;
+  margin-top: 164px;
+  border-radius: 40px;
+}
+.empowerBuiness .circleImgBox ul li {
+  list-style: none;
+}
+.empowerBuiness .circleImgBox ul li:nth-child(1) {
+  position: absolute;
+  right: 0;
+  top: 40px;
+  left: -271px;
+}
+.empowerBuiness .circleImgBox ul li:nth-child(1) h2 {
+  color: #231F20 !important;
+  opacity: 0.2;
+  font-size: 24px;
+  font-family: "metropolissemi_bold";
+}
+.empowerBuiness .circleImgBox ul li:nth-child(1) p {
+  font-family: "Metropolis-Regular";
+  font-size: 18px;
+  width: 90%;
+}
+.empowerBuiness .circleImgBox ul li:nth-child(2) {
+  position: absolute;
+  right: 0;
+  top: 356px;
+  left: -209px;
+}
+.empowerBuiness .circleImgBox ul li:nth-child(2) p {
+  font-family: "Metropolis-Regular";
+  font-size: 18px;
+  width: 90%;
+}
+.empowerBuiness .circleImgBox ul li:nth-child(2) h2 {
+  color: #231F20 !important;
+  opacity: 0.2;
+  font-size: 24px;
+  font-family: "metropolissemi_bold";
+}
+.empowerBuiness .circleImgBox ul li:nth-child(3) {
+  position: absolute;
+  right: 0;
+  top: 32px;
+  left: 551px;
+  width: 90%;
+}
+.empowerBuiness .circleImgBox ul li:nth-child(3) .lightHeading {
+  font-family: "Metropolis-Regular";
+}
+.empowerBuiness .circleImgBox ul li:nth-child(3) p {
+  font-family: "Metropolis-Regular";
+  font-size: 18px;
+  width: 90%;
+}
+.empowerBuiness .circleImgBox ul li:nth-child(3) h2 {
+  color: #231F20 !important;
+  font-family: "metropolissemi_bold";
+  font-size: 24px;
+  position: relative;
+  left: -46px;
+}
+.empowerBuiness .circleImgBox ul li:nth-child(4) {
+  position: absolute;
+  right: 0;
+  top: 355px;
+  left: 599px;
+  width: 90%;
+}
+.empowerBuiness .circleImgBox ul li:nth-child(4) .lightHeading {
+  font-family: "Metropolis-Regular";
+}
+.empowerBuiness .circleImgBox ul li:nth-child(4) p {
+  font-family: "Metropolis-Regular";
+  font-size: 18px;
+  font-size: 18px;
+  width: 90%;
+}
+.empowerBuiness .circleImgBox ul li:nth-child(4) h2 {
+  color: #231F20 !important;
+  font-family: "metropolissemi_bold";
+  font-size: 24px;
+}
+.empowerBuiness .circleImgBox ul li:nth-child(5) {
+  position: absolute;
+  right: 0;
+  top: auto;
+  left: 203px;
+  bottom: 45px;
+}
+.empowerBuiness .circleImgBox ul li:nth-child(5) h2 {
+  color: #231F20 !important;
+  font-family: "metropolissemi_bold";
+  font-size: 24px;
+}
+.empowerBuiness .circleImgBox ul li:nth-child(5) p {
+  font-family: "Metropolis-Regular";
+  font-size: 18px;
+  width: 90%;
+}
+.empowerBuiness .circleImgBox ul li:nth-child(5) .lightHeading {
+  font-family: "Metropolis-Regular";
+}
+.empowerBuiness .circleImgBox ul li:nth-child(6) {
+  position: absolute;
+  right: 0;
+  top: 24px;
+  left: -341px;
+}
+.empowerBuiness .circleImgBox ul li:nth-child(6) p {
+  font-family: "Metropolis-Regular";
+  font-size: 18px;
+  width: 90%;
+}
+.empowerBuiness .circleImgBox ul li:nth-child(6) h2 {
+  color: #231F20 !important;
+  font-size: 24px;
+}
+.empowerBuiness h1 {
+  text-align: left;
+  font-size: 64px;
+  line-height: 58px;
+  color: #231F20;
+  font-family: "metropolissemi_bold";
+}
+.empowerBuiness .circleImg {
+  position: relative;
+  width: 400px;
+  margin: 0 auto;
+  top: 64px;
+  margin: 0 auto;
+  right: -59px;
+}
+.empowerBuiness .circleImg .imgService {
+  position: absolute;
+  left: -63px;
+  top: 40px;
+}
+.empowerBuiness .circleImgBox {
+  max-width: 564px;
+  height: auto;
+  position: relative;
+  margin: 0 auto;
+  padding-bottom: 20%;
+  margin-top: 68px;
+}
+.empowerBuiness .imgDotted {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.testimonial {
+  text-align: center;
+  padding-top: 10%;
+  padding-bottom: 6%;
+}
+.testimonial h1 {
+  font-family: "metropolisbold";
+  font-size: 64px !important;
+}
+.testimonial .testominalsContent {
+  padding-top: 164px;
+}
+.testimonial .customerTestimonials {
+  font-size: 24px;
+  padding: 0;
+  margin: 0;
+  font-family: "metropolissemi_bold";
+  color: #666363;
+}
+.testimonial h2 {
+  font-size: 32px;
+  color: #231F20;
+  margin: 0;
+  padding-top: 61px;
+}
+.testimonial .ceo {
+  font-size: 18px;
+  color: #666363;
+  font-family: "metropolissemi_bold";
+}
+.testimonial .colon {
+  font-size: 54px;
+  color: #013EE6;
+  font-family: "metropolisblack";
+}
+.testimonial .textParaTestominals {
+  font-family: "Metropolis-Regular";
+  margin: 0;
+  font-size: 24px;
+  color: #666363;
+  line-height: 27px;
+}
+
+@media only screen and (max-width: 1280px) {
+  br {
+    display: block;
+  }
+  .empowerBuiness .circleImgBox ul li:nth-child(5) {
+    position: absolute;
+    right: 0;
+    top: auto;
+    left: 203px;
+    bottom: 0px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .empowerBuiness h1 {
+    text-align: left;
+    font-size: 34px;
+    line-height: 42px;
+    color: #231F20;
+    font-family: "metropolissemi_bold";
+  }
+  .testimonial .testominalsContent {
+    padding-top: 70px;
+  }
+  .exploreHeading {
+    font-size: 64px !important;
+    text-align: center;
+    margin-top: 70px;
+    font-family: "metropolisbold";
+  }
+  .manageService .manage_services_box ul li:first-child {
+    list-style: none;
+    font-size: 22px;
+    color: #013EE6;
+    line-height: 55px;
+  }
+  .manageService .manage_services_box ul li {
+    list-style: none;
+    font-size: 22px;
+    color: #C8C7C7;
+  }
+  .manageService .manageRightBox {
+    height: auto;
+    max-width: 600px;
+    float: right;
+  }
+  br {
+    display: none;
+  }
+  .career .banner .banner-text {
+    display: block;
+    font-family: "metropolisbold";
+    line-height: 40px;
+  }
+}
+@media only screen and (max-width: 1440px) {
+  .rocketSeed ul li {
+    margin: 95px auto 0px auto;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  .rocketSeed p {
+    font-family: "Metropolis-Regular";
+    padding-bottom: 40px;
+  }
+  .rocketSeed ul li {
+    margin: 27px 25px 0px auto;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .rocketSeed ul {
+    display: block;
+  }
+  .rocketSeed ul .top-align {
+    top: 0px;
+    position: relative;
+  }
+  .rocketSeed ul li {
+    width: 90%;
+    margin-bottom: 40px !important;
+    margin: auto;
+  }
+}
+@media only screen and (max-width: 667px) {
+  .rocketSeed h1 {
+    text-align: left;
+    font-size: 28px;
+    line-height: 58px;
+    color: #231F20;
+    font-family: "metropolissemi_bold";
+  }
+  .rocketSeed {
+    padding-top: 20px;
+  }
+  .rocketSeed ul li h2 {
+    font-size: 24px;
+  }
+  .regular_text {
+    font-family: "Metropolis-Regular";
+    line-height: 24px;
+    color: #666363;
+    font-size: 16px;
+  }
+  .rocketSeed ul .top-align {
+    top: 0px;
+    position: relative;
+  }
+  .rocketSeed ul {
+    display: block;
+  }
+  .rocketSeed ul li {
+    width: 90%;
+    margin-bottom: 40px !important;
+    margin: auto;
+  }
+  .testimonial .textParaTestominals {
+    font-family: "Metropolis-Regular";
+    margin: 0;
+    font-size: 16px;
+    color: #666363;
+    line-height: 20px;
+  }
+  .career .banner .banner-text {
+    display: block;
+    font-family: "metropolisbold";
+    line-height: 26px;
+    font-size: 24px;
+  }
+  .testimonial h1 {
+    font-family: "metropolisbold";
+    font-size: 28px !important;
+  }
+  .testimonial .testominalsContent {
+    padding-top: 4px;
+  }
+  .empowerBuiness {
+    margin-top: 20px;
+    padding: 20px 20px;
+    margin-top: 20px;
+    border-radius: 40px;
+  }
+  .empowerBuiness h1 {
+    font-size: 30px;
+    color: #231F20;
+    line-height: 39px;
+  }
+  .manageService .manageRightBox {
+    height: auto;
+    margin-bottom: 40px;
+  }
+  .manageService .manage_services_box ul li:first-child {
+    font-size: 24px;
+  }
+  .manageService .manage_services_box ul li {
+    font-size: 24px;
+  }
+  .exploreHeading {
+    font-size: 31px !important;
+    text-align: center;
+    margin-top: 20px;
+    font-family: "metropolisbold";
+  }
+  .platformMain h1 {
+    font-size: 32px !important;
+    font-family: "metropolisbold";
+    text-align: center;
+  }
+  .innderWrapper .career-Para {
+    padding-top: 10px;
+  }
+  .innderWrapper .keyFuture {
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 30px;
+  }
+  .innderWrapper .effortLessHeading {
+    padding-top: 10px;
+  }
+  .innderWrapper .careerContent .careerText {
+    font-size: 18px;
+    color: #231F20;
+    padding-top: 0;
+    line-height: 26px;
+    font-family: "Metropolis-Regular" !important;
+  }
+  .innderWrapper .productTop {
+    padding-top: 10px;
+  }
+  .platformMain {
+    padding-top: 20px;
+    padding-bottom: 0;
+  }
+  .platformMain .paraPlatformText {
+    padding-top: 20px;
+  }
+  .platformMain img {
+    padding-top: 40px !important;
+  }
+}

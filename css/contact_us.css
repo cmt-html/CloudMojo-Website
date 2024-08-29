@@ -1,0 +1,242 @@
+.welcomeText {
+  margin-top: 140px;
+}
+.welcomeText h1 {
+  font-size: 60px;
+  background: -webkit-linear-gradient(246.24deg, #000719 8.73%, #013EE6 84.49%);
+  -webkit-background-clip: text;
+  font-family: "metropolismedium";
+  line-height: 60px;
+  -webkit-text-fill-color: transparent;
+}
+.welcomeText .line-border {
+  height: 2px;
+  background-color: #969696;
+  margin-bottom: 20px;
+  width: 125px;
+}
+.welcomeText p {
+  font-size: 24px;
+  color: #303235;
+  font-family: "Metropolis-Regular";
+  line-height: 24px;
+}
+.welcomeText .welcomeParaText {
+  padding-top: 100px;
+}
+
+.contactForm {
+  margin-bottom: 120px;
+  margin-top: 122px;
+  padding-top: 101px;
+  padding-left: 54px;
+  border-radius: 24px;
+  padding-right: 54px;
+  padding-bottom: 51px;
+  background: linear-gradient(106.31deg, #F5F7FD 3.8%, rgba(223, 231, 255, 0.4) 94.72%);
+}
+.contactForm .selectContactForm {
+  float: left;
+}
+.contactForm .selectContactForm h1 {
+  font-family: "metropolismedium";
+  color: #303235;
+  font-size: 42px;
+  margin: 0;
+}
+.contactForm .selectContactForm p {
+  line-height: 30px;
+  padding-top: 31px;
+  font-style: italic;
+  font-family: "Metropolis-Regular";
+  color: #303235;
+}
+.contactForm .selectContactfield {
+  float: right;
+  float: right;
+  border: 1px solid #CFCFCF;
+  padding: 6px;
+  border-radius: 70px;
+}
+.contactForm .selectContactfield button {
+  border-radius: 70px;
+  border: none;
+  padding: 0;
+  height: 48px;
+  width: 150px;
+  margin: 0px 3px;
+}
+.contactForm .selectContactfield .buttonEmpty {
+  background-color: transparent;
+  color: #67696C;
+  font-family: "metropolismedium";
+  font-size: 19px;
+}
+.contactForm .form {
+  clear: both;
+}
+.contactForm .inputInline {
+  display: flex;
+  float: none;
+}
+.contactForm .inputBottom {
+  display: flex;
+  float: none;
+}
+.contactForm .inputGroup {
+  margin-right: 48px;
+  width: 100%;
+  margin-top: 15px;
+}
+.contactForm .inputStyle {
+  border: 0;
+  padding-bottom: 14px;
+  border-bottom-width: 0px;
+  border-bottom-style: none;
+  border-bottom-color: currentcolor;
+  background-color: transparent;
+  border-bottom: 2px solid #9D9D9D;
+  width: 100%;
+  padding-top: 48px;
+  outline: none;
+  font-family: "Metropolis-Regular";
+  font-size: 19px;
+  color: #9D9D9D;
+}
+.contactForm .selectBox {
+  width: 48%;
+  height: 39px;
+  color: #9D9D9D;
+  background: none;
+  border: 0;
+  border-bottom-width: 0px;
+  border-bottom-style: none;
+  border-bottom-color: currentcolor;
+  border-bottom: 2px solid #9D9D9D;
+  margin-top: 68px;
+  font-family: Arial;
+  margin-right: 48px;
+}
+.contactForm .terms {
+  margin-top: 49px;
+}
+.contactForm .terms .text {
+  font-size: 19px;
+  padding-left: 10px;
+}
+.contactForm .get-in-toch-button {
+  text-align: center;
+  background-color: #013EE6;
+  padding: 10px;
+  border: 0;
+  border-radius: 34px;
+  color: #fff;
+  padding: 10px 20px;
+  display: block;
+  font-family: "metropolissemi_bold";
+  margin-top: 86px;
+  width: 100%;
+}
+.contactForm .get-in-toch-button .rightButton {
+  padding-left: 22px;
+}
+.contactForm #formInner1 {
+  display: none;
+}
+.contactForm #formInner2 {
+  display: none;
+}
+.contactForm .activeform {
+  background-color: #013EE6 !important;
+  color: #fff;
+}
+.contactForm .buttonEmpty0 {
+  background-color: transparent;
+}
+.contactForm .buttonEmpty1 {
+  background-color: transparent;
+}
+.contactForm .buttonEmpty2 {
+  background-color: transparent;
+}
+
+@media only screen and (max-width: 768px) {
+  .contactForm .selectContactForm h1 {
+    margin-top: 70px;
+  }
+  .welcomeText h1 {
+    font-size: 36px;
+    line-height: 38px;
+  }
+}
+@media only screen and (max-width: 667px) {
+  .contactForm .selectContactForm {
+    float: left;
+    padding-top: 40px;
+  }
+  .welcomeText {
+    margin-top: 120px;
+  }
+  .welcomeText h1 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .welcomeText .welcomeParaText {
+    padding-top: 13px;
+  }
+  .welcomeText p {
+    font-size: 16px;
+  }
+  .contactForm {
+    margin-bottom: 120px;
+    margin-top: 20px;
+  }
+  .contactForm {
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding-top: 48px;
+    padding-left: 16px;
+    border-radius: 24px;
+    padding-right: 11px;
+    padding-bottom: 51px;
+  }
+  .contactForm .selectContactForm h1 {
+    font-family: "metropolismedium";
+    color: #303235;
+    font-size: 27px;
+    margin: 0;
+  }
+  .contactForm .selectContactForm p {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .contactForm .selectContactfield button {
+    padding: 0;
+    height: 48px;
+    width: 95px;
+  }
+  .contactForm .selectContactfield {
+    display: flex;
+  }
+  .contactForm .inputInline {
+    display: block;
+    float: none;
+  }
+  .contactForm .inputBottom {
+    display: block;
+    float: none;
+  }
+  .contactForm .selectBox {
+    width: 100%;
+    color: #9D9D9D;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .contactForm .selectContactfield button {
+    padding: 0;
+    height: 48px;
+    width: 82px;
+    font-size: 14px;
+  }
+}
