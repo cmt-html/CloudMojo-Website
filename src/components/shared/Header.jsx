@@ -10,14 +10,11 @@ const Header = () => {
   const [headerScroll, setHeaderScroll] = useState(false);
   const [whiteLogo, setWhiteLogo] = useState(false);
 
-
-
   const handelarMenucolsed = () => {
     setActive(!activeMenu);
   };
 
   useEffect(() => {
-
     const handleScroll = () => {
       setHeaderScroll(window.scrollY > 20); // Change 100 to your preferred threshold
     };
@@ -25,25 +22,24 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
     handleScroll(); // Check scroll position on mount
 
-    
-
     const isAvailiableImg = document.querySelector(".bg-color");
-    if(isAvailiableImg.classList.contains(".logo-white")){
+    if (isAvailiableImg.classList.contains(".logo-white")) {
       setWhiteLogo(!whiteLogo);
     }
 
-    
-    
     console.log(whiteLogo);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-
   }, []);
 
   return (
-    <header className={`${headerScroll?"scroll":""} ${whiteLogo?"logo-white":""}`}>
+    <header
+      className={`${headerScroll ? "scroll" : ""} ${
+        whiteLogo ? "logo-white" : ""
+      }`}
+    >
       <div className="container">
         <div className="icon" onClick={handelarMenucolsed}>
           <img src="./images/menu-dots.png" />
@@ -51,7 +47,7 @@ const Header = () => {
         <div className="header-top">
           <div className="row">
             <div className="col-md-6">
-              <div className="logo  logo-white" >
+              <div className="logo  logo-white">
                 <img src="./images/cmt-logo-cloud.png" />
               </div>
             </div>
