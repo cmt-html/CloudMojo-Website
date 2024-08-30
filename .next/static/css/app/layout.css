@@ -12003,9 +12003,9 @@ textarea.form-control-lg {
   }
 }
 
-/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[13].use[5]!./src/app/css/globals.scss ***!
-  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[13].use[5]!./src/css/globals.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 @font-face {
   font-family: "Metropolis_BlackItalic";
   src: url("/fonts/Metropolis-BlackItalic.woff2") format("woff2"), url("/fonts/Metropolis-BlackItalic.woff") format("woff");
@@ -12122,6 +12122,9 @@ header {
   position: fixed;
   z-index: 9999;
   width: 100%;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
 }
 header .icon {
   float: right;
@@ -12150,14 +12153,13 @@ header .header-top {
 }
 header .side-bar {
   background: #fff;
-  position: absolute;
-  transition: transform 1s ease-in-out;
+  position: fixed;
+  right: -100%;
+  transition: 0.5s ease-out;
   width: 454px !important;
   top: 0;
   width: 100%;
-  right: 0px;
-  height: 1208px;
-  transform: translate(596px);
+  height: auto;
   box-shadow: 1px -2px 12px #ccc;
   border-radius: 11px 0px 0px 12px;
 }
@@ -12190,19 +12192,25 @@ header .side-bar .social-icon-nav ul li {
   display: inline-block;
   margin: 0px 10px;
 }
-header .active {
-  right: -480px;
-  position: absolute;
+
+.side-bar.activeMenu {
+  right: 0;
 }
 
-.activeMenu {
-  transition: transform 9s ease-in;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  transform: translate(0px) !important;
+header.scroll {
+  background-color: #fff;
+  animation: slideDown 1s ease-out;
+  box-shadow: 0 14px 16px 0 rgba(11, 2, 55, 0.1);
 }
 
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 footer .get-in-toch-button {
   text-align: right;
   background-color: #013EE6;
@@ -12405,7 +12413,7 @@ footer .contacts .fotter-text-right {
 
 html, body {
   height: 100%;
-  font-family: "Metropolis_Regular";
+  font-family: "Metropolis-Regular";
 }
 
 ol, ul {
@@ -12744,7 +12752,7 @@ p span {
   }
 }
 .bg-color {
-  background-color: #F2F8FD;
+  background-color: #f2f8fd;
   min-height: 800px;
 }
 
@@ -12760,6 +12768,7 @@ p span {
   z-index: 9;
   color: #fff;
   top: 25%;
+  animation: jump 4s infinite linear;
 }
 .banner-top .top-to-bottom {
   position: relative;
@@ -12767,7 +12776,7 @@ p span {
 }
 
 .aboutText h1 {
-  color: #005EBF !important;
+  color: #005ebf !important;
   padding-top: 172px;
 }
 .aboutText p {
@@ -12786,13 +12795,13 @@ p span {
   padding-top: 164px;
 }
 .ourVistion h1 {
-  color: #231F20;
+  color: #231f20;
   font-family: "metropolissemi_bold";
   letter-spacing: 3%;
   font-size: 64px;
 }
 .ourVistion .circle {
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   width: 38px;
   height: 38px;
   border-radius: 50%;
@@ -12849,7 +12858,7 @@ p span {
   padding-top: 164px;
 }
 .ourMission h1 {
-  color: #231F20;
+  color: #231f20;
   font-family: "metropolissemi_bold";
   letter-spacing: 3%;
   font-size: 64px !important;
@@ -12866,7 +12875,7 @@ p span {
 .ourMission .display-our .ourMissionList li::before {
   content: "";
   position: absolute;
-  background-color: #013EE6;
+  background-color: #013ee6;
   height: 12px;
   width: 12px;
   border-radius: 20px;
@@ -12884,7 +12893,7 @@ p span {
   margin-left: 155px;
 }
 .ourMission .display-our .ourMissionList .color-gray {
-  color: #ADB1B6;
+  color: #adb1b6;
 }
 
 .card-container .mainCardHeading {
@@ -12893,19 +12902,19 @@ p span {
   padding-top: 35px;
 }
 .card-container .cardBlue {
-  background-color: #D1EBFC;
+  background-color: #d1ebfc;
   height: 458px;
 }
 .card-container .cardBlue-1 {
-  background-color: #AEE1FD;
+  background-color: #aee1fd;
   height: 458px;
 }
 .card-container .cardBlue-2 {
-  background-color: #8DD7FE;
+  background-color: #8dd7fe;
   height: 458px;
 }
 .card-container .cardBlue-3 {
-  background-color: #68CDFF;
+  background-color: #68cdff;
   height: 458px;
 }
 .card-container .cardHeading {
@@ -12943,12 +12952,12 @@ p span {
   font-family: "Metropolis-Regular" !important;
 }
 .about-diffrence .about-main h2 {
-  color: #1128A4;
+  color: #1128a4;
   font-size: 26px;
   font-weight: 600;
 }
 .about-diffrence .about-main h1 {
-  color: #231F20;
+  color: #231f20;
   font-size: 64px;
   font-family: "metropolissemi_bold";
 }
@@ -12989,7 +12998,7 @@ p span {
   padding-bottom: 40%;
 }
 .about-focus h1 {
-  color: #231F20;
+  color: #231f20;
   font-family: "metropolissemi_bold";
   font-size: 64px;
 }
@@ -12997,7 +13006,7 @@ p span {
   position: relative;
 }
 .about-focus .about-main h2 {
-  color: #1128A4;
+  color: #1128a4;
   font-size: 26px;
   font-weight: 600;
 }
@@ -13054,7 +13063,7 @@ p span {
   background-color: #fff;
 }
 .bg-color-white h1 {
-  color: #231F20;
+  color: #231f20;
   font-family: "metropolissemi_bold";
   font-size: 64px;
 }
@@ -13122,14 +13131,14 @@ p span {
     top: 20%;
   }
   .aboutText h1 {
-    color: #005EBF;
+    color: #005ebf;
     padding-top: 53px;
   }
   br {
     display: none;
   }
   .containerSpace .aboutText h1 {
-    color: #231F20;
+    color: #231f20;
     font-family: "metropolismedium";
     font-size: 24px !important;
   }
@@ -13238,7 +13247,7 @@ p span {
     padding-bottom: 0;
   }
   .containerSpace .aboutText h1 {
-    color: #231F20;
+    color: #231f20;
     font-family: "metropolismedium";
     font-size: 24px;
   }
@@ -13249,7 +13258,7 @@ p span {
     font-size: 32px !important;
   }
   .ourVistion h1 {
-    color: #231F20;
+    color: #231f20;
     font-family: "metropolissemi_bold";
     letter-spacing: 3%;
     padding-bottom: 70px;
@@ -13293,7 +13302,7 @@ p span {
     padding-bottom: 0;
   }
   .about-focus h1 {
-    color: #231F20;
+    color: #231f20;
     font-family: "metropolissemi_bold";
     font-size: 24px;
   }
@@ -13347,13 +13356,13 @@ p span {
     padding-top: 15px;
   }
   .containerSpace .aboutText h1 {
-    color: #231F20;
+    color: #231f20;
     font-family: "metropolismedium";
     font-size: 22px !important;
     line-height: 30px;
   }
   .card-container .cardBlue {
-    background-color: #D1EBFC;
+    background-color: #d1ebfc;
     height: 204px;
   }
   .card-container .cardPara {
@@ -13428,7 +13437,7 @@ p span {
     padding-top: 0;
   }
   .aboutText h1 {
-    color: #005EBF !important;
+    color: #005ebf !important;
     padding-top: 17px;
     font-size: 18px;
   }
@@ -13442,13 +13451,13 @@ p span {
     top: 14%;
   }
   .ourMission h1 {
-    color: #231F20;
+    color: #231f20;
     font-family: "metropolissemi_bold";
     letter-spacing: 3%;
     font-size: 24px !important;
   }
   .ourVistion h1 {
-    color: #231F20;
+    color: #231f20;
     font-family: "metropolissemi_bold";
     letter-spacing: 3%;
     font-size: 24px !important;
@@ -16180,6 +16189,108 @@ p span {
   }
   .platformMain img {
     padding-top: 40px !important;
+  }
+}
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes moving {
+  0% {
+    transform: translatey(0px);
+  }
+  20% {
+    transform: translateX(-50px);
+  }
+  50% {
+    transform: translatey(-40px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes jump {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  40% {
+    transform: translate3d(0, 40px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes tpupdown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+@keyframes shine {
+  to {
+    background-position: -200% center;
+  }
+}
+@keyframes fullcircle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes lighting {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes mobile_app_animetion_circel {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  95% {
+    opacity: 2%;
+  }
+  100% {
+    width: 450px;
+    height: 450px;
+    opacity: 0;
+  }
+}
+@keyframes animated-stroke {
+  0% {
+    stroke-dasharray: 0 80%;
+  }
+  100% {
+    stroke-dasharray: 10% 0%;
+    stroke-dashoffset: 25%;
   }
 }
 .product_page {
