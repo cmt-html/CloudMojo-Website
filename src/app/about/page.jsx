@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <section className="bg-color logo-white">
+    <section className="bg-color logo-white"> 
       <div className="banner-top">
         <img
           src="./images/main-banner.png"
