@@ -1,0 +1,139 @@
+@media only screen and (max-width: 1440px) {
+  footer h1 {
+    font-size: 52px;
+    color: #231f20;
+    font-family: "metropolisbold";
+    line-height: 60px;
+  }
+  .footer-bg {
+    background: url("/images/footer-bg.png") no-repeat;
+    background-size: 100% 100%;
+    height: 100vh;
+    margin-top: 74px;
+    .top-to-bottom {
+      margin-top: 144px;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  footer h1 {
+    font-size: 36px;
+    color: #231f20;
+    font-family: "metropolisbold";
+    line-height: 35px;
+  }
+}
+
+@media only screen and (max-width: 667px) {
+  header .side-bar {
+    width: auto !important;
+  }
+  header .side-bar .navbar .menu-bar {
+    padding: 0;
+    width: 100%;
+    margin-left: 32px;
+    margin-top: 68px;
+  }
+  header .side-bar .social-icon-nav ul {
+    margin-bottom: 32px;
+    padding: 0;
+    margin-left: 51px;
+  }
+  header .cross-icon {
+    right: 19px;
+  }
+  .footer-bg .footer-social-iocn .social-icon ul li {
+    padding: 0px 5px;
+  }
+  .footer-bg .footer-text .footer-text-inner p {
+    font-size: 16px;
+  }
+  .footer-bg .footer-text .footer-text-inner .search-box {
+    margin-top: 56px;
+    width: 276px;
+  }
+  .footer-bg .footer-text .footer-text-inner .search-box input {
+    width: 296px;
+  }
+  .footer-bg .footer-text .footer-text-inner h1 {
+    font-size: 26px;
+  }
+  footer h1 {
+    font-size: 24px;
+    line-height: 36px;
+  }
+  footer .contacts .mobileNo {
+    font-size: 20px;
+  }
+  .footer-bg .footer-text {
+    padding: 0px 20px;
+  }
+  footer .contacts .emailId {
+    font-size: 18px;
+  }
+  .copy-right p {
+    font-size: 14px;
+  }
+  header .active {
+    right: 0;
+    display: none;
+    position: absolute;
+  }
+  footer .get-in-toch-button {
+    margin-top: 0px;
+  }
+  footer .contacts {
+    margin-top: 40px;
+  }
+}
+
+
+
+
+/* Extra large devices (large desktops and above) */
+@media (max-width: 1399.98px) {
+    @import "./responsive/extra-large-devices(max-1400).scss";
+}
+
+
+/* Large devices (desktops, up to 1200px) */
+@media (max-width: 1199.98px) {
+    /* Your CSS rules for large devices */
+    @import "./responsive/large-devices(max-1200).scss";
+}
+
+
+
+/* Medium devices (tablets, up to 992px) */
+@media (max-width: 991.98px) {
+    @import "./responsive/_medium-devices(max-992).scss";
+}
+
+
+
+/* Small devices (phones, up to 768px) */
+@media (max-width: 767.98px) {
+    @import "./responsive/small-devices-(max-767).scss";
+}
+
+
+
+/* Extra small devices (phones, up to 576px) */
+@media (max-width: 575.98px) {
+    @import "./responsive/extra-small-devices(max576).scss";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

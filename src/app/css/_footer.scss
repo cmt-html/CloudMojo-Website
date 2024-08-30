@@ -1,0 +1,199 @@
+footer {
+    .get-in-toch-button {
+        text-align: right;
+        background-color: #013EE6;
+        padding: 10px;
+        border: 0;
+        border-radius: 34px;
+        color: #fff;
+        padding: 10px 20px;
+        display: block;
+        font-family: 'metropolissemi_bold';
+        margin-top: 86px;
+        width: 185px;
+        float: right;
+        span {
+            margin-left: 10px;
+            display: inline-block;
+        }
+    }
+    h1 {
+        font-size: 80px;
+        color: #231F20;
+        font-family: 'metropolisbold';
+        line-height: 72px;
+    }
+    .contacts {
+        padding: 56px 0px 49px 0px;
+        margin-top: 143px;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        p {
+            margin: 0;
+            font-family: 'Metropolis-Regular';
+            font-size: 16px;
+        }
+        .emailId {
+            font-size: 32px;
+            color: #231F20;
+            font-family: 'metropolismedium';
+        }
+        .mobileNo {
+            font-size: 32px;
+            color: #231F20;
+            font-family: 'metropolismedium';
+        }
+        .fotter-text-right {
+            text-align: right;
+        }
+    }
+}
+
+.footer-bg {
+    background: url("/images/footer-bg.png") no-repeat;
+    background-size: 100% 100%;
+    height: 68vh;
+    margin-top: 74px;
+    .top-to-bottom {
+        margin-top: 144px;
+    }
+    .footer-text {
+        padding: 0px 70px;
+        .footer-text-inner {
+            padding-top: 0px;
+            h1 {
+                color: #013EE6;
+                margin: 0;
+                font-size: 42px;
+                font-family: 'metropolissemi_bold';
+            }
+            p {
+                font-size: 20px;
+                font-family: 'metropolismedium';
+                margin: 0;
+                color: #231F20;
+            }
+            .search-box {
+                margin-top: 56px;
+                width: 348px;
+                position: relative;
+                input {
+                    border: 1px solid #231F20;
+                    border-radius: 25px;
+                    padding: 10px;
+                    outline: none;
+                    height: 48px;
+                    width: 368px;
+                    background-color: transparent;
+                }
+                 ::placeholder {
+                    font-family: 'metropolismedium';
+                }
+                .searchIcon {
+                    position: absolute;
+                    top: 12px;
+                    right: 0;
+                }
+            }
+        }
+    }
+    .bottom-footer {
+        a {
+            text-decoration: none;
+        }
+        .top-text {
+            font-size: 16px;
+            font-family: 'metropolissemi_bold';
+            color: #fff;
+            position: relative;
+            top: 2px;
+            left: 10px;
+        }
+    }
+    .line-top {
+        height: 2px;
+    }
+    .footer-social-iocn {
+        padding-top: 74px;
+        .social-icon {
+            ul {
+                display: flex;
+                justify-content: end;
+                li {
+                    padding: 0px 13px;
+                    list-style-type: none;
+                    display: inline-block;
+                    .whats-app {
+                        background: url("/images/whatsappicon.png") no-repeat;
+                        width: 38px;
+                        height: 38px;
+                        display: inline-block;
+                    }
+                    .twitter {
+                        background: url("/images/twittericon.png") no-repeat;
+                        width: 38px;
+                        display: inline-block;
+                        height: 38px;
+                    }
+                    .linkedin {
+                        background: url("/images/linkedinicon.png") no-repeat;
+                        width: 38px;
+                        display: inline-block;
+                        height: 38px;
+                    }
+                    .facebook {
+                        background: url("/images/facebookicon.png") no-repeat;
+                        width: 38px;
+                        height: 38px;
+                        display: inline-block;
+                    }
+                    .instagram {
+                        background: url("/images/instagramicon.png") no-repeat;
+                        width: 38px;
+                        height: 38px;
+                        display: inline-block;
+                    }
+                    .youtube {
+                        background: url("/images/youtubeicon.png") no-repeat;
+                        width: 38px;
+                        height: 38px;
+                        display: inline-block;
+                    }
+                    a {
+                        text-decoration: none;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    .copy-right-text {
+        padding-top: 40px;
+        ul {
+            padding: 0;
+            li {
+                .copyrightIcon {
+                    background: url("/images/arrow-copyright.png") no-repeat;
+                    width: 24px;
+                    height: 19px;
+                    display: inline-block;
+                    position: relative;
+                    top: 4px;
+                }
+                list-style: none;
+                display: inline-block;
+                a {
+                    font-family: 'metropolissemi_bold';
+                    font-size: 16px;
+                    text-decoration: none;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .copy-right {
+        font-size: 18px;
+        text-align: right;
+        color: #fff;
+    }
+}

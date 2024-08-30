@@ -1,0 +1,144 @@
+@font-face {
+    font-family: 'Metropolis_BlackItalic';
+    src: url('/fonst/Metropolis-BlackItalic.woff2') format('woff2'),
+        url('/fonst/Metropolis-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Metropolis_Black';
+    src: url('/fonst/Metropolis-Black.woff2') format('woff2'),
+        url('/fonst/Metropolis-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Metropolis_SemiBoldItalic';
+    src: url('/fonst/Metropolis-SemiBoldItalic.woff2') format('woff2'),
+        url('/fonst/Metropolis-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Metropolis_Light';
+    src: url('/fonst/Metropolis-Light.woff2') format('woff2'),
+        url('/fonst/Metropolis-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Metropolis_Bold';
+    src: url('/fonst/Metropolis-Bold.woff2') format('woff2'),
+        url('/fonst/Metropolis-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Metropolis_ExtraLightItalic';
+    src: url('/fonst/Metropolis-ExtraLightItalic.woff2') format('woff2'),
+        url('/fonst/Metropolis-ExtraLightItalic.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Metropolis_ExtraBold';
+    src: url('/fonst/Metropolis-ExtraBold.woff2') format('woff2'),
+        url('/fonst/Metropolis-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Metropolis_ExtraBoldItalic';
+    src: url('/fonst/Metropolis-ExtraBoldItalic.woff2') format('woff2'),
+        url('/fonst/Metropolis-ExtraBoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Metropolis_RegularItalic';
+    src: url('/fonst/Metropolis-RegularItalic.woff2') format('woff2'),
+        url('/fonst/Metropolis-RegularItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Metropolis_Medium';
+    src: url('/fonst/Metropolis-Medium.woff2') format('woff2'),
+        url('/fonst/Metropolis-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Metropolis_Regular';
+    src: url('/fonst/Metropolis-Regular.woff2') format('woff2'),
+        url('/fonst/Metropolis-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Metropolis_BoldItalic';
+    src: url('/fonst/Metropolis-BoldItalic.woff2') format('woff2'),
+        url('/fonst/Metropolis-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Metropolis_Thin';
+    src: url('/fonst/Metropolis-Thin.woff2') format('woff2'),
+        url('/fonst/Metropolis-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Metropolis_MediumItalic';
+    src: url('/fonst/Metropolis-MediumItalic.woff2') format('woff2'),
+        url('/fonst/Metropolis-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Metropolis_ExtraLight';
+    src: url('/fonst/Metropolis-ExtraLight.woff2') format('woff2'),
+        url('/fonst/Metropolis-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Metropolis_SemiBold';
+    src: url('/fonst/Metropolis-SemiBold.woff2') format('woff2'),
+        url('/fonst/Metropolis-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
