@@ -51,7 +51,7 @@ const Header = () => {
     if (activeMenu) {
       tl.play().timeScale(1);
     } else {
-      tl.timeScale(2).reverse();
+      tl.timeScale(2.5).reverse();
     }
 
     if (activeMenu) {

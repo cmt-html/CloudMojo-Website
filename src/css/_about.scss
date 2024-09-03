@@ -3,52 +3,84 @@
   min-height: 800px;
 }
 
-.banner-top {
-  .bannerImg {
-    position: relative;
-    top: 0;
-  }
-  .bannerText {
+.bannerImg {
+  position: relative;
+  top: 0;
+}
+.bannerText {
+  position: absolute;
+  z-index: 9;
+  color: #fff;
+  top: 50%;
+  left: 10%;
+  max-width: 742px;
+  width: 100%;
+  transform: translateY(-50%);
+  // animation: jumpCustom 4s infinite linear;
+  h1 {
     font-family: "Metropolis-Regular";
     font-size: 90px;
     line-height: 91.26px;
-    position: absolute;
-    z-index: 9;
-    color: #fff;
-    top: 25%;
-    animation: jump 4s infinite linear;
-  }
-  .top-to-bottom {
-    position: relative;
-    z-index: 999;
   }
 }
+.top-to-bottom {
+  position: relative;
+  z-index: 999;
+}
 
-.aboutText {
-  h1 {
-    color: #005ebf !important;
-    padding-top: 172px;
+.bg-wrapper {
+  position: relative;
+}
+
+.about {
+  position: relative;
+  .aboutText {
+    z-index: 1;
+    position: relative;
+    h2 {
+      color: #005ebf !important;
+      padding-top: 172px;
+      color: #231f20;
+      font-family: "metropolismedium";
+      font-size: 56px;
+      max-width: 940px;
+      width: 100%;
+    }
+    p {
+      color: #606060;
+      font-size: 18px;
+    }
+    .line-border {
+      height: 2px;
+      background-color: #969696;
+      margin-bottom: 20px;
+      width: 125px;
+      margin-top: 40px;
+    }
   }
-  p {
-    color: #606060;
-    font-size: 18px;
-  }
-  .line-border {
-    height: 2px;
-    background-color: #969696;
-    margin-bottom: 20px;
-    width: 125px;
-    margin-top: 40px;
+
+  .bg-cloud {
+    display: flex;
+    overflow: hidden;
+    position: absolute;
+    z-index: 0;
+    bottom: -230px;
+    left: 0;
+    right: 0;
+    animation: jump 2s infinite linear;
   }
 }
 
 .ourVistion {
-  padding-top: 164px;
+  position: relative;
+  z-index: 1;
+  padding-top: 100px;
   h1 {
     color: #231f20;
     font-family: "metropolissemi_bold";
     letter-spacing: 3%;
     font-size: 64px;
+    margin-bottom: 50px;
   }
   .circle {
     background-color: #d9d9d9;
@@ -118,7 +150,8 @@
 }
 
 .ourMission {
-  padding-top: 164px;
+  padding-top: 104px;
+
   h1 {
     color: #231f20;
     font-family: "metropolissemi_bold";
@@ -160,6 +193,7 @@
 }
 
 .card-container {
+  padding-top: 200px;
   .mainCardHeading {
     font-family: "metropolissemi_bold";
     font-size: 92px;
@@ -181,25 +215,27 @@
     background-color: #68cdff;
     height: 458px;
   }
-  .cardHeading {
-    float: left;
-    width: 10%;
-  }
+
   .cardHeadingh2 {
-    float: left;
     font-family: "metropolissemi_bold";
     font-size: 42px;
-    width: 20%;
     padding-top: 53px;
+    max-width: 236px;
+    text-align: left;
   }
   .cardPara {
     float: left;
     font-family: "Metropolis-Regular" !important;
-    width: 25%;
     font-size: 18px;
     padding-top: 62px;
     line-height: 26px;
+    max-width: 450px;
+    width: 100%;
   }
+}
+
+.cardno {
+  margin-right: 90px;
 }
 
 .about-diffrence {
@@ -333,11 +369,6 @@
   }
 }
 
-.containerSpace {
-  padding-left: 60px !important;
-  padding-right: 60px !important;
-}
-
 .aboutText p {
   color: #606060;
   font-family: "Metropolis-Regular" !important;
@@ -368,17 +399,11 @@
   .ourMission {
     padding-top: 20px;
   }
-  .card-container .cardHeading {
-    float: left;
-    width: 17%;
-  }
-  .card-container .cardHeadingh2 {
-    float: left;
-    font-family: "metropolissemi_bold";
-    font-size: 42px;
-    width: 30%;
-    padding-top: 53px;
-  }
+}
+.card-container .cardHeadingh2 {
+  font-family: "metropolissemi_bold";
+  font-size: 42px;
+  padding-top: 53px;
 }
 
 @media only screen and (max-width: 992px) {
@@ -414,7 +439,7 @@
   br {
     display: none;
   }
-  .containerSpace .aboutText h1 {
+  .aboutText h1 {
     color: #231f20;
     font-family: "metropolismedium";
     font-size: 24px !important;
@@ -523,7 +548,8 @@
     position: relative;
     padding-bottom: 0;
   }
-  .containerSpace .aboutText h1 {
+
+  .aboutText h1 {
     color: #231f20;
     font-family: "metropolismedium";
     font-size: 24px;
@@ -541,10 +567,7 @@
     padding-bottom: 70px;
     font-size: 24px !important;
   }
-  .card-container .cardHeadingh2 {
-    float: left;
-    width: 100%;
-  }
+
   .aboutText p {
     color: #606060;
     font-family: "Metropolis-Regular";
@@ -633,7 +656,7 @@
     width: 100%;
     padding-top: 15px;
   }
-  .containerSpace .aboutText h1 {
+  .aboutText h1 {
     color: #231f20;
     font-family: "metropolismedium";
     font-size: 22px !important;
@@ -707,10 +730,7 @@
     font-family: "Metropolis-Regular" !important;
     font-size: 16px;
   }
-  .containerSpace {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-  }
+
   .ourVistion {
     padding-top: 0;
   }

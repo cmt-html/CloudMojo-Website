@@ -12235,6 +12235,8 @@ header nav .menu-items li.open > a::after {
 header nav .menu-wrapper {
   max-height: 700px;
   height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 header nav .menu-wrapper::-webkit-scrollbar-track {
   border-radius: 10px;
@@ -12476,6 +12478,7 @@ footer .contacts .fotter-text-right {
 html, body {
   height: 100%;
   font-family: "Metropolis-Regular";
+  overflow-x: hidden;
 }
 
 ol, ul {
@@ -12826,49 +12829,85 @@ p span {
   min-height: 800px;
 }
 
-.banner-top .bannerImg {
+.bannerImg {
   position: relative;
   top: 0;
 }
-.banner-top .bannerText {
-  font-family: "Metropolis-Regular";
-  font-size: 90px;
-  line-height: 91.26px;
+
+.bannerText {
   position: absolute;
   z-index: 9;
   color: #fff;
-  top: 25%;
-  animation: jump 4s infinite linear;
+  top: 50%;
+  left: 10%;
+  max-width: 742px;
+  width: 100%;
+  transform: translateY(-50%);
 }
-.banner-top .top-to-bottom {
+.bannerText h1 {
+  font-family: "Metropolis-Regular";
+  font-size: 90px;
+  line-height: 91.26px;
+}
+
+.top-to-bottom {
   position: relative;
   z-index: 999;
 }
 
-.aboutText h1 {
+.bg-wrapper {
+  position: relative;
+}
+
+.about {
+  position: relative;
+}
+.about .aboutText {
+  z-index: 1;
+  position: relative;
+}
+.about .aboutText h2 {
   color: #005ebf !important;
   padding-top: 172px;
+  color: #231f20;
+  font-family: "metropolismedium";
+  font-size: 56px;
+  max-width: 940px;
+  width: 100%;
 }
-.aboutText p {
+.about .aboutText p {
   color: #606060;
   font-size: 18px;
 }
-.aboutText .line-border {
+.about .aboutText .line-border {
   height: 2px;
   background-color: #969696;
   margin-bottom: 20px;
   width: 125px;
   margin-top: 40px;
 }
+.about .bg-cloud {
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  z-index: 0;
+  bottom: -230px;
+  left: 0;
+  right: 0;
+  animation: jump 2s infinite linear;
+}
 
 .ourVistion {
-  padding-top: 164px;
+  position: relative;
+  z-index: 1;
+  padding-top: 100px;
 }
 .ourVistion h1 {
   color: #231f20;
   font-family: "metropolissemi_bold";
   letter-spacing: 3%;
   font-size: 64px;
+  margin-bottom: 50px;
 }
 .ourVistion .circle {
   background-color: #d9d9d9;
@@ -12925,7 +12964,7 @@ p span {
 }
 
 .ourMission {
-  padding-top: 164px;
+  padding-top: 104px;
 }
 .ourMission h1 {
   color: #231f20;
@@ -12966,6 +13005,9 @@ p span {
   color: #adb1b6;
 }
 
+.card-container {
+  padding-top: 200px;
+}
 .card-container .mainCardHeading {
   font-family: "metropolissemi_bold";
   font-size: 92px;
@@ -12987,24 +13029,25 @@ p span {
   background-color: #68cdff;
   height: 458px;
 }
-.card-container .cardHeading {
-  float: left;
-  width: 10%;
-}
 .card-container .cardHeadingh2 {
-  float: left;
   font-family: "metropolissemi_bold";
   font-size: 42px;
-  width: 20%;
   padding-top: 53px;
+  max-width: 236px;
+  text-align: left;
 }
 .card-container .cardPara {
   float: left;
   font-family: "Metropolis-Regular" !important;
-  width: 25%;
   font-size: 18px;
   padding-top: 62px;
   line-height: 26px;
+  max-width: 450px;
+  width: 100%;
+}
+
+.cardno {
+  margin-right: 90px;
 }
 
 .about-diffrence {
@@ -13138,11 +13181,6 @@ p span {
   font-size: 64px;
 }
 
-.containerSpace {
-  padding-left: 60px !important;
-  padding-right: 60px !important;
-}
-
 .aboutText p {
   color: #606060;
   font-family: "Metropolis-Regular" !important;
@@ -13162,18 +13200,13 @@ p span {
   .ourMission {
     padding-top: 20px;
   }
-  .card-container .cardHeading {
-    float: left;
-    width: 17%;
-  }
-  .card-container .cardHeadingh2 {
-    float: left;
-    font-family: "metropolissemi_bold";
-    font-size: 42px;
-    width: 30%;
-    padding-top: 53px;
-  }
 }
+.card-container .cardHeadingh2 {
+  font-family: "metropolissemi_bold";
+  font-size: 42px;
+  padding-top: 53px;
+}
+
 @media only screen and (max-width: 992px) {
   .banner-top .bannerText {
     font-family: "Metropolis-Regular";
@@ -13207,7 +13240,7 @@ p span {
   br {
     display: none;
   }
-  .containerSpace .aboutText h1 {
+  .aboutText h1 {
     color: #231f20;
     font-family: "metropolismedium";
     font-size: 24px !important;
@@ -13316,7 +13349,7 @@ p span {
     position: relative;
     padding-bottom: 0;
   }
-  .containerSpace .aboutText h1 {
+  .aboutText h1 {
     color: #231f20;
     font-family: "metropolismedium";
     font-size: 24px;
@@ -13333,10 +13366,6 @@ p span {
     letter-spacing: 3%;
     padding-bottom: 70px;
     font-size: 24px !important;
-  }
-  .card-container .cardHeadingh2 {
-    float: left;
-    width: 100%;
   }
   .aboutText p {
     color: #606060;
@@ -13425,7 +13454,7 @@ p span {
     width: 100%;
     padding-top: 15px;
   }
-  .containerSpace .aboutText h1 {
+  .aboutText h1 {
     color: #231f20;
     font-family: "metropolismedium";
     font-size: 22px !important;
@@ -13499,10 +13528,6 @@ p span {
     font-family: "Metropolis-Regular" !important;
     font-size: 16px;
   }
-  .containerSpace {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-  }
   .ourVistion {
     padding-top: 0;
   }
@@ -13534,7 +13559,7 @@ p span {
   }
 }
 .career {
-  background: radial-gradient(39.7% 39.7% at 50% 41.08%, #FFFFFF 0%, #F4FBFF 100%);
+  background: radial-gradient(39.7% 39.7% at 50% 41.08%, #ffffff 0%, #f4fbff 100%);
 }
 .career .banner {
   text-align: center;
@@ -13546,30 +13571,30 @@ p span {
   font-family: "metropolisbold";
 }
 .career .banner .banner-text span {
-  color: #013EE6;
+  color: #013ee6;
 }
 
-.containerSpace .aboutText h1 {
-  color: #231F20;
+.aboutText h1 {
+  color: #231f20;
   font-family: "metropolismedium";
   font-size: 56px;
 }
 
 .workAt {
-  color: #231F20;
+  color: #231f20;
   font-size: 64px;
   font-family: "metropolissemi_bold" !important;
 }
 
 .careerContent .subheading {
-  color: #013EE6;
+  color: #013ee6;
   line-height: 42px;
   padding-top: 37px;
   font-size: 42px;
 }
 .careerContent .careerText {
   font-size: 18px;
-  color: #231F20;
+  color: #231f20;
   padding-top: 44px;
   line-height: 26px;
   font-family: "Metropolis-Regular" !important;
@@ -13624,18 +13649,18 @@ p span {
   margin-top: 20px;
 }
 .careerWhyWork .whyWord ul li h2 {
-  color: #1128A4;
+  color: #1128a4;
   font-family: "metropolissemi_bold";
   font-size: 30px;
 }
 .careerWhyWork .whyWord ul li p {
-  color: #231F20;
+  color: #231f20;
   font-size: 18px;
   font-family: "Metropolis-Regular" !important;
 }
 
 .lifeAt {
-  background: linear-gradient(105deg, #DEE7FE 5.32%, rgba(208, 242, 255, 0.84) 91.2%);
+  background: linear-gradient(105deg, #dee7fe 5.32%, rgba(208, 242, 255, 0.84) 91.2%);
   border-radius: 40px;
   height: 648px;
   text-align: center;
@@ -13646,7 +13671,7 @@ p span {
 .lifeAt h1 {
   font-family: "metropolissemi_bold";
   font-size: 64px;
-  color: #231F20;
+  color: #231f20;
 }
 .lifeAt p {
   padding-top: 42px;
@@ -13673,7 +13698,7 @@ p span {
   right: 0px;
 }
 .bePartMission .inputGroup .searchBox {
-  border: 1px solid #231F20;
+  border: 1px solid #231f20;
   border-radius: 25px;
   outline: none;
   padding: 8px 20px;
@@ -13697,17 +13722,17 @@ p span {
 }
 .bePartMission .inputSearchBox .development {
   margin: 0px 10px;
-  border: 1px solid #231F20;
+  border: 1px solid #231f20;
   border-radius: 40px;
   padding: 11px 36px 11px 36px;
   margin-bottom: 20px;
-  color: #231F20;
+  color: #231f20;
   background-color: transparent;
 }
 .bePartMission .inputSearchBox .activeButton {
-  background-color: #013EE6;
+  background-color: #013ee6;
   color: #fff;
-  border: 1px solid #013EE6;
+  border: 1px solid #013ee6;
 }
 
 .productDesigner {
@@ -13728,12 +13753,12 @@ p span {
 }
 .productDesigner .development {
   margin: 20px 10px;
-  border: 1px solid #9D9B9C;
+  border: 1px solid #9d9b9c;
   border-radius: 40px;
   padding: 11px 36px 11px 36px;
   margin-bottom: 20px;
   background-color: transparent;
-  color: #9D9B9C;
+  color: #9d9b9c;
   font-family: "metropolissemi_bold";
 }
 .productDesigner .development img {
@@ -13764,7 +13789,7 @@ p span {
   display: block;
   padding: 48px 10px 48px 10px;
   list-style-type: none;
-  border-bottom: 1px solid #231F20;
+  border-bottom: 1px solid #231f20;
   overflow: hidden;
 }
 
@@ -13783,7 +13808,7 @@ p span {
     padding: 30px 0px 30px 0px;
     padding-top: 30px;
     list-style-type: none;
-    border-bottom: 1px solid #231F20;
+    border-bottom: 1px solid #231f20;
     overflow: hidden;
   }
   .bePartMission .inputSearchBox .development:first-child {
@@ -13799,19 +13824,19 @@ p span {
     line-height: 40px;
   }
   .containerSpace .aboutText h1 {
-    color: #231F20;
+    color: #231f20;
     font-family: "metropolismedium";
     font-size: 27px;
     line-height: 30px;
   }
   .workAt {
-    color: #231F20;
+    color: #231f20;
     font-size: 28px;
     font-family: "metropolissemi_bold" !important;
     padding-top: 30px;
   }
   .careerContent .subheading {
-    color: #013EE6;
+    color: #013ee6;
     line-height: 24px;
     padding-top: 18px;
     font-size: 24px;
@@ -13835,12 +13860,12 @@ p span {
     float: left;
   }
   .careerWhyWork .whyWord ul li p {
-    color: #231F20;
+    color: #231f20;
     font-size: 14px;
     font-family: "Metropolis-Regular" !important;
   }
   .careerWhyWork .whyWord ul li h2 {
-    color: #1128A4;
+    color: #1128a4;
     font-family: "metropolissemi_bold";
     font-size: 18px;
   }
@@ -13892,7 +13917,7 @@ p span {
   .lifeAt h1 {
     font-family: "metropolissemi_bold";
     font-size: 32px;
-    color: #231F20;
+    color: #231f20;
   }
   .lifeAt p {
     padding-top: 10px;
@@ -16300,6 +16325,17 @@ p span {
   }
   100% {
     transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes jumpCustom {
+  0% {
+    to: 50%;
+  }
+  50% {
+    transform: translate3d(0, 0px, 0);
+  }
+  100% {
+    to: 50%;
   }
 }
 @keyframes tpupdown {

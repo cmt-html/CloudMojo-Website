@@ -1,29 +1,56 @@
-import React from "react";
+"use client";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import React, { useRef } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
+  const cardContainer = useRef(null);
+  // const body = gsap.utils.selector("body");
+
+  
+
+  useGSAP(() => {
+    const tlCard = gsap.timeline({scrollTrigger:{pin:true,scrub:1}});
+
+    tlCard.to(".cardBlue", {
+      scrollTrigger:{
+        pin:true,
+        scrub:2,
+        start: "top center",
+        end: "top 100px",
+        scrub: true,
+        markers: true
+      }
+    })
+    
+  }, {scope:cardContainer});
+
   return (
-    <section className="bg-color logo-white"> 
-      <div className="banner-top">
+    <section className="bg-color logo-white">
+      <div className="bg-wrapper" id="top">
         <img
           src="./images/main-banner.png"
           width="100%"
           className="bannerImg"
         />
-        <div className="container containerSpace">
-          <div className="bannerText">
-            CloudMojo, <br></br>
-            where innovation<br></br> meets digital<br></br> transformation.{" "}
-          </div>
+
+        <div className="bannerText">
+          <h1> CloudMojo, where innovation meets digital transformation. </h1>
         </div>
       </div>
 
-      <div className="container  containerSpace">
+      <div className="about ">
         <div className="aboutText">
-          <h1>
-            We are a dynamic team of<br></br> visionaries, dedicated to<br></br>{" "}
-            reshaping the future of businesses<br></br> through cutting-edge
-            AI-powered<br></br> SaaS products.{" "}
-          </h1>
+          <div className="container">
+            <h2>
+              We are a dynamic team of visionaries, dedicated to reshaping the
+              future of businesses through cutting-edge AI-powered SaaS
+              products.
+            </h2>
+          </div>
           <div className="row">
             <div className="col-md-7"></div>
             <div className="col-md-5">
@@ -31,15 +58,20 @@ const About = () => {
               <p>
                 Our journey began with a simple yet<br></br> powerful belief:
                 that technology should<br></br> adapt to your needs, empowering
-                you<br></br> to navigate the complexities of the<br></br>{" "}
-                digital era seamlessly.
+                you
+                <br></br> to navigate the complexities of the<br></br> digital
+                era seamlessly.
               </p>
             </div>
           </div>
         </div>
+        <div className="bg-cloud">
+          <img src="/images/clouds/about-cloud-1.svg" alt="clouds" />
+          <img src="/images/clouds/about-cloud-2.svg" alt="clouds" />
+        </div>
       </div>
 
-      <div className="container ourVistion containerSpace">
+      <div className="container ourVistion ">
         <h1>Our Vision</h1>
         <div className="row ">
           <div className="display-our-mission">
@@ -65,7 +97,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="container ourMission containerSpace">
+      <div className="container ourMission ">
         <h1>Our Mission</h1>
         <div className="row ">
           <div className="display-our">
@@ -94,48 +126,66 @@ const About = () => {
         </div>
       </div>
 
-      <div className=" card-container">
-        <div className="cardBlue containerSpace">
+      <div className=" card-container" ref={cardContainer}>
+        <div className="cardBlue ">
           <div className="container">
             <h2 className="mainCardHeading">Our Values</h2>
           </div>
         </div>
-        <div className="cardBlue-1  containerSpace">
+        <div className="cardBlue-1">
           <div className="container">
-            <h1 className="cardHeading mainCardHeading">01</h1>
-            <h2 className="cardHeadingh2">Innovation</h2>
-            <p className="cardPara">
-              We thrive on extending the boundaries of what's possible. Our team
-              of experts combines a passion for innovation with a deep
-              understanding of industry challenges, delivering solutions that
-              fit your needs.
-            </p>
+            <div className="row">
+              <div className="col-md-5 d-flex">
+                <h2 className="cardHeading mainCardHeading cardno">01</h2>
+                <h2 className="cardHeadingh2">Innovation</h2>
+              </div>
+              <div className="col-md-6">
+                <p className="cardPara">
+                  We thrive on extending the boundaries of what's possible. Our
+                  team of experts combines a passion for innovation with a deep
+                  understanding of industry challenges, delivering solutions
+                  that fit your needs.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-        <div className="cardBlue-2  containerSpace">
+        <div className="cardBlue-2  ">
           <div className="container">
-            <h1 className="cardHeading mainCardHeading">02</h1>
-            <h2 className="cardHeadingh2">AI Expertise</h2>
-            <p className="cardPara">
-              Harnessing the power of artificial intelligence, we bring you SaaS
-              products that not only solve today's problems but also anticipate
-              and adapt to the challenges of tomorrow. Our AI-driven approach
-              ensures that your business stays ahead in the ever-evolving
-              digital landscape.
-            </p>
+            <div className="row">
+              <div className="col-md-5 d-flex">
+                <h2 className="cardHeading mainCardHeading cardno">02</h2>
+                <h2 className="cardHeadingh2">AI Expertise</h2>
+              </div>
+              <div className="col-md-6">
+                <p className="cardPara">
+                  Harnessing the power of artificial intelligence, we bring you
+                  SaaS products that not only solve today's problems but also
+                  anticipate and adapt to the challenges of tomorrow. Our
+                  AI-driven approach ensures that your business stays ahead in
+                  the ever-evolving digital landscape.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-        <div className="cardBlue-3  containerSpace">
+        <div className="cardBlue-3  ">
           <div className="container">
-            <h1 className="cardHeading mainCardHeading">03</h1>
-            <h2 className="cardHeadingh2">Customer-Centric Focus</h2>
-            <p className="cardPara">
-              Your success is our success. We are committed to understanding
-              your unique requirements and tailoring our solutions to fit
-              seamlessly into your workflow. Our customer-centric approach
-              ensures that you receive not just a product, but a partnership
-              geared towards your growth.
-            </p>
+            <div className="row">
+              <div className="col-md-5 d-flex">
+                <h2 className="cardHeading mainCardHeading cardno">03</h2>
+                <h2 className="cardHeadingh2">Customer-Centric Focus</h2>
+              </div>
+              <div className="col-md-6">
+                <p className="cardPara">
+                  Your success is our success. We are committed to understanding
+                  your unique requirements and tailoring our solutions to fit
+                  seamlessly into your workflow. Our customer-centric approach
+                  ensures that you receive not just a product, but a partnership
+                  geared towards your growth.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -224,7 +274,7 @@ const About = () => {
       </div>
 
       <div className="bg-color-white">
-        <div className="container  containerSpace">
+        <div className="container  ">
           <div className="aboutText ">
             <h1>Areas of Expertise</h1>
             <div className="row">
