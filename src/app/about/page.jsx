@@ -22,7 +22,7 @@ const About = () => {
         start: "top center",
         end: "top 100px",
         scrub: true,
-        markers: true
+        markers: true 
       }
     })
     
