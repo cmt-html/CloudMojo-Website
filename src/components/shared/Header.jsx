@@ -11,6 +11,8 @@ const Header = () => {
   const [whiteLogo, setWhiteLogo] = useState(false);
   const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
 
+  const [tl] = useState(() => gsap.timeline({ paused: true }));
+
   const menuItem = useRef(null);
 
   const handelarMenucolsed = () => {
@@ -22,39 +24,35 @@ const Header = () => {
   };
 
   useGSAP(() => {
-    const tl = gsap.timeline();
-
     tl.to("header nav", {
       top: 0,
       right: 0,
       duration: "0.5",
-    }).from(".menu-items > li", {
-      x: "200",
-      duration: "0.7",
-      stagger: "0.3",
-      opacity: "0",
     })
-    .from(".social-icons ul li", {
-      x: "300",
-      duration: "0.7",
-      stagger: "0.3",
-      opacity: "0",
-    });
-
-
-    
-  });
+      .from(".menu-items > li", {
+        x: "200",
+        duration: "0.3",
+        stagger: "0.2",
+        opacity: "0",
+      })
+      .from(".social-icons ul li", {
+        x: "300",
+        duration: "0.3",
+        stagger: "0.2",
+        opacity: "0",
+      });
+  }, [tl]);
 
   useEffect(() => {
     const handleScroll = () => {
       setHeaderScroll(window.scrollY > 20); // Change 100 to your preferred threshold
     };
 
-    // if(activeMenu){
-    //   tl.play();
-    // }else{
-    //   tl.reverse();
-    // }
+    if (activeMenu) {
+      tl.play().timeScale(1);
+    } else {
+      tl.timeScale(2).reverse();
+    }
 
     if (activeMenu) {
       document.body.classList.add("overflow-hidden");
@@ -73,44 +71,6 @@ const Header = () => {
     };
   }, [activeMenu]);
 
-
-
-  // UseEffect for logo 
-
-  useEffect(()=>{
-    const logo = document.getElementById("logo");
-
-  function getBodyBackgroundColor() {
-    return window.getComputedStyle(document.body).backgroundColor;
-    console.log(window.getComputedStyle(document.body).backgroundColor);
-    
-  }
-
-  function setLogoColor() {
-    const bgColor = getBodyBackgroundColor();
-    const rgbValues = bgColor.match(/\d+/g).map(Number);
-    
-    // Calculate brightness: 0.299*R + 0.587*G + 0.114*B (Luminance formula)
-    const brightness = (0.299 * rgbValues[0] + 0.587 * rgbValues[1] + 0.114 * rgbValues[2]);
-
-    // Set logo color based on brightness
-    if (brightness > 128) {
-      // If background is light, make logo dark
-      logo.style.fill = "black";
-    } else {
-      // If background is dark, make logo light
-      logo.style.fill = "white";
-    }
-  }
-
-  // Call the function initially to set the correct logo color
-  setLogoColor();
-
-  // If the background color changes dynamically, you might want to watch for changes
-  // and update the logo color accordingly
-  window.addEventListener('resize', setLogoColor);
-  },[])
-
   return (
     <header
       className={`
@@ -122,7 +82,7 @@ const Header = () => {
       <div className="main-header">
         <div className="logo">
           <Link href={"/"}>
-            <img id='logo' src="./images/cmt-logo-cloud.svg" alt="logo" />{" "}
+            <img id="logo" src="./images/cmt-logo-cloud.svg" alt="logo" />{" "}
           </Link>
         </div>
         <div className="right-icon" onClick={handelarMenucolsed}>
@@ -133,8 +93,8 @@ const Header = () => {
       </div>
 
       <nav>
-        <div className="close-icon" onClick={handelarMenucolsed}>
-          <img src="/images/close-icon.svg" alt="close-icon" />
+        <div className="close-icon">
+          <img src="/images/close-icon.svg" alt="close-icon"  onClick={handelarMenucolsed} />
         </div>
 
         <div className="menu-wrapper">

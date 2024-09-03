@@ -12512,7 +12512,7 @@ img {
 }
 
 .container {
-  max-width: 1470px;
+  max-width: 1270px;
   width: 100%;
   padding: 0 15px;
   margin: 0 auto;
@@ -12522,6 +12522,11 @@ img {
   height: 800px;
 }
 
+@media (min-width: 1441px) {
+  .container {
+    max-width: 1470px;
+  }
+}
 .leaderShipTop {
   padding-top: 160px;
 }
