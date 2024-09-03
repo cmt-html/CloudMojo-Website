@@ -1,46 +1,227 @@
 "use client";
 
-// import Leadership from "@/app/leadership/page";
-import React, { useEffect, useState } from "react";
-//import { Scrollbar } from './react-scrollbars-custom';
+import React, { useEffect, useRef, useState } from "react";
+import { gsap } from "gsap"; // Import GSAP
 import Link from "next/link";
+import { useGSAP } from "@gsap/react";
 
 const Header = () => {
   const [activeMenu, setActive] = useState(false);
   const [headerScroll, setHeaderScroll] = useState(false);
   const [whiteLogo, setWhiteLogo] = useState(false);
+  const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
+
+  const menuItem = useRef(null);
 
   const handelarMenucolsed = () => {
     setActive(!activeMenu);
   };
+
+  const toggleSubmenu = () => {
+    setIsSubmenuOpen(!isSubmenuOpen);
+  };
+
+  useGSAP(() => {
+    const tl = gsap.timeline();
+
+    tl.to("header nav", {
+      top: 0,
+      right: 0,
+      duration: "0.5",
+    }).from(".menu-items > li", {
+      x: "200",
+      duration: "0.7",
+      stagger: "0.3",
+      opacity: "0",
+    })
+    .from(".social-icons ul li", {
+      x: "300",
+      duration: "0.7",
+      stagger: "0.3",
+      opacity: "0",
+    });
+
+
+    
+  });
 
   useEffect(() => {
     const handleScroll = () => {
       setHeaderScroll(window.scrollY > 20); // Change 100 to your preferred threshold
     };
 
+    // if(activeMenu){
+    //   tl.play();
+    // }else{
+    //   tl.reverse();
+    // }
+
+    if (activeMenu) {
+      document.body.classList.add("overflow-hidden");
+      // animateHeader();
+    } else {
+      document.body.classList.remove("overflow-hidden");
+      // animateHeaderReverse();
+    }
+
     window.addEventListener("scroll", handleScroll);
     handleScroll(); // Check scroll position on mount
 
-    const isAvailiableImg = document.querySelector(".bg-color");
-    if (isAvailiableImg.classList.contains(".logo-white")) {
-      setWhiteLogo(!whiteLogo);
-    }
-
-    console.log(whiteLogo);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      document.body.classList.remove("overflow-hidden");
     };
-  }, []);
+  }, [activeMenu]);
+
+
+
+  // UseEffect for logo 
+
+  useEffect(()=>{
+    const logo = document.getElementById("logo");
+
+  function getBodyBackgroundColor() {
+    return window.getComputedStyle(document.body).backgroundColor;
+    console.log(window.getComputedStyle(document.body).backgroundColor);
+    
+  }
+
+  function setLogoColor() {
+    const bgColor = getBodyBackgroundColor();
+    const rgbValues = bgColor.match(/\d+/g).map(Number);
+    
+    // Calculate brightness: 0.299*R + 0.587*G + 0.114*B (Luminance formula)
+    const brightness = (0.299 * rgbValues[0] + 0.587 * rgbValues[1] + 0.114 * rgbValues[2]);
+
+    // Set logo color based on brightness
+    if (brightness > 128) {
+      // If background is light, make logo dark
+      logo.style.fill = "black";
+    } else {
+      // If background is dark, make logo light
+      logo.style.fill = "white";
+    }
+  }
+
+  // Call the function initially to set the correct logo color
+  setLogoColor();
+
+  // If the background color changes dynamically, you might want to watch for changes
+  // and update the logo color accordingly
+  window.addEventListener('resize', setLogoColor);
+  },[])
 
   return (
     <header
-      className={`${headerScroll ? "scroll" : ""} ${
-        whiteLogo ? "logo-white" : ""
-      }`}
+      className={`
+        ${headerScroll ? "scroll" : ""} 
+        ${whiteLogo ? "logo-white" : ""}
+        ${activeMenu ? "activeMenu" : ""}
+      `}
     >
-      <div className="container">
+      <div className="main-header">
+        <div className="logo">
+          <Link href={"/"}>
+            <img id='logo' src="./images/cmt-logo-cloud.svg" alt="logo" />{" "}
+          </Link>
+        </div>
+        <div className="right-icon" onClick={handelarMenucolsed}>
+          <span> &nbsp;</span>
+          <span> &nbsp;</span>
+          <span> &nbsp;</span>
+        </div>
+      </div>
+
+      <nav>
+        <div className="close-icon" onClick={handelarMenucolsed}>
+          <img src="/images/close-icon.svg" alt="close-icon" />
+        </div>
+
+        <div className="menu-wrapper">
+          <ul className="menu-items" ref={menuItem}>
+            <li
+              onClick={toggleSubmenu}
+              className={`${isSubmenuOpen ? "open" : ""}`}
+            >
+              <Link href={"javascript:void(0)"}>Solutions</Link>
+
+              <ul className={`sub-menu`}>
+                <li>
+                  <Link href={"#"}>Finance</Link>
+                </li>
+                <li>
+                  <Link href={"#"}>Digital</Link>
+                </li>
+                <li>
+                  <Link href={"#"}>Communication</Link>
+                </li>
+                <li>
+                  <Link href={"#"}>AI Automation</Link>
+                </li>
+                <li>
+                  <Link href={"#"}>Digital Archiving</Link>
+                </li>
+                <li>
+                  <Link href={"#"}>Retail</Link>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <Link href={"#"}>Services</Link>
+            </li>
+            <li>
+              <Link href={"#"}>Resources</Link>
+            </li>
+            <li>
+              <Link href={"#"}>About Us</Link>
+            </li>
+            <li>
+              <Link href={"#"}>Contact</Link>
+            </li>
+          </ul>
+          <div className="social-icons">
+            <ul>
+              <li>
+                <Link href="#">
+                  <img src="./images/Facebooknav.png" />
+                </Link>
+              </li>
+              <li>
+                <Link href="#">
+                  <img src="./images/Instagramnav.png" />
+                </Link>
+              </li>
+              <li>
+                <Link href="#">
+                  <img src="./images/Youtubenav.png" />
+                </Link>
+              </li>
+
+              <li>
+                <Link href="#">
+                  <img src="./images/Whatsapnav.png" />
+                </Link>
+              </li>
+              <li>
+                <Link href="#">
+                  <img src="./images/twitternav.png" />
+                </Link>
+              </li>
+              <li>
+                <Link href="#">
+                  <img src="./images/Linkedinnav.png" />
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div className="backdropShadow" onClick={handelarMenucolsed}>
+        &nbsp;
+      </div>
+
+      {/* <div className="">
         <div className="icon" onClick={handelarMenucolsed}>
           <img src="./images/menu-dots.png" />
         </div>
@@ -56,7 +237,7 @@ const Header = () => {
       </div>
 
       <nav>
-        <div className={`side-bar ${activeMenu ? "activeMenu" : ""}`}>
+        <div className="side-bar">
           <div className="cross-icon" onClick={handelarMenucolsed}>
             <img src="./images/cross-button.png" />
           </div>
@@ -164,7 +345,8 @@ const Header = () => {
             </div>
           </div>
         </div>
-      </nav>
+        <div className="backdropShadow">&nbsp;</div>
+      </nav> */}
     </header>
   );
 };
