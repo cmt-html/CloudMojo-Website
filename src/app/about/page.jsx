@@ -1,32 +1,80 @@
 "use client";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
 import React, { useRef } from "react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
   const cardContainer = useRef(null);
-  // const body = gsap.utils.selector("body");
+  const cardBlue = useRef(null);
+  const cardBlue1 = useRef(null);
+  const cardBlue2 = useRef(null);
+  const cardBlue3 = useRef(null);
+  const body = gsap.utils.selector("body");
 
-  
 
-  useGSAP(() => {
-    const tlCard = gsap.timeline({scrollTrigger:{pin:true,scrub:1}});
 
-    tlCard.to(".cardBlue", {
-      scrollTrigger:{
-        pin:true,
-        scrub:2,
-        start: "top center",
-        end: "top 100px",
-        scrub: true,
-        markers: true 
-      }
-    })
-    
-  }, {scope:cardContainer});
+
+  useGSAP(
+    () => {
+      const cardTl = gsap.timeline({
+        scrollTrigger: {
+          trigger: cardContainer.current,
+          pin: true,
+          scroller: document.body,
+          start: "top top",
+          end:"bottom top",
+          markers:true
+        },
+      });
+
+      cardTl
+        .to(cardBlue.current, {
+          translateY:0,
+          boxShadow:"0px -2px 12px 0px #1C1C1C4D",
+          webkitFilter:"blur(1px);",
+          scrollTrigger: {
+            trigger: cardBlue.current,
+            start: "bottom bottom",
+            scrub: 2, // Smoothly animates based on scroll position
+          },
+        })
+        .to(cardBlue1.current, {
+          // y: "-80%",
+          translateY:"-80%",
+          boxShadow:"0px -2px 12px 0px #1C1C1C4D",
+          filter:"blur(.8px);",
+          scrollTrigger: {
+            trigger: cardBlue1.current,
+            start: "bottom bottom",
+            scrub: 2, // Smoothly animates based on scroll position
+          },
+        })
+        .to(cardBlue2.current, {
+          // y: "-162%",
+          translateY:"-162%",
+          boxShadow:"0px -2px 12px 0px #1C1C1C4D",
+          filter:"blur(.5px);",
+          scrollTrigger: {
+            trigger: cardBlue2.current,
+            start: "bottom bottom",
+            scrub: 2, // Smoothly animates based on scroll position
+          },
+        })
+        .to(cardBlue3.current, {
+          // y: "-244%",
+          translateY:"-244%",
+          boxShadow:"0px -2px 12px 0px #1C1C1C4D",
+          scrollTrigger: {
+            trigger: cardBlue3.current,
+            start: "bottom bottom",
+            scrub: 2, // Smoothly animates based on scroll position
+          },
+        })
+    }, 
+  );
 
   return (
     <section className="bg-color logo-white">
@@ -51,6 +99,7 @@ const About = () => {
               products.
             </h2>
           </div>
+          <div className="container">
           <div className="row">
             <div className="col-md-7"></div>
             <div className="col-md-5">
@@ -63,6 +112,7 @@ const About = () => {
                 era seamlessly.
               </p>
             </div>
+          </div>
           </div>
         </div>
         <div className="bg-cloud">
@@ -126,13 +176,13 @@ const About = () => {
         </div>
       </div>
 
-      <div className=" card-container" ref={cardContainer}>
-        <div className="cardBlue ">
+      <div className="card-container" ref={cardContainer}>
+        <div className="cardBlue cardb" ref={cardBlue}>
           <div className="container">
             <h2 className="mainCardHeading">Our Values</h2>
           </div>
         </div>
-        <div className="cardBlue-1">
+        <div className="cardBlue-1 cardb" ref={cardBlue1}>
           <div className="container">
             <div className="row">
               <div className="col-md-5 d-flex">
@@ -150,7 +200,7 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="cardBlue-2  ">
+        <div className="cardBlue-2 cardb" ref={cardBlue2}>
           <div className="container">
             <div className="row">
               <div className="col-md-5 d-flex">
@@ -169,7 +219,7 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="cardBlue-3  ">
+        <div className="cardBlue-3 cardb" ref={cardBlue3}>
           <div className="container">
             <div className="row">
               <div className="col-md-5 d-flex">

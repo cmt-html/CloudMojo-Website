@@ -103,7 +103,7 @@ const Header = () => {
               onClick={toggleSubmenu}
               className={`${isSubmenuOpen ? "open" : ""}`}
             >
-              <Link href={"javascript:void(0)"}>Solutions</Link>
+              <Link href="#">Solutions</Link>
 
               <ul className={`sub-menu`}>
                 <li>

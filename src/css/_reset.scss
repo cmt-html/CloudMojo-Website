@@ -2,13 +2,20 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    // outline: 1px solid #000;
 }
 
 html, body {
     height: 100%;
+    width: 100%;
     //font-family: sans-serif; /* or any font you prefer */
+    
+
+body{
     font-family: 'Metropolis-Regular';
     overflow-x: hidden;
+    scroll-behavior: smooth;
+}
 }
 
 ol, ul {
