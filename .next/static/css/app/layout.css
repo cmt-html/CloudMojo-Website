@@ -12827,9 +12827,8 @@ p span {
     padding: 15px;
   }
 }
-.bg-color {
+.about-bg-color {
   background-color: #f2f8fd;
-  min-height: 800px;
 }
 
 .bannerImg {
@@ -12898,6 +12897,9 @@ p span {
   left: 0;
   right: 0;
   animation: jump 2s infinite linear;
+}
+.about .bg-cloud img {
+  width: 100%;
 }
 
 .ourVistion {
@@ -13016,13 +13018,6 @@ p span {
   font-size: 92px;
   padding-top: 35px;
 }
-.card-container .cardBlue,
-.card-container .cardBlue-1,
-.card-container .cardBlue-2,
-.card-container .cardBlue-3 {
-  position: relative;
-  box-shadow: none;
-}
 .card-container .cardBlue {
   background-color: #d1ebfc;
   height: 458px;
@@ -13066,8 +13061,8 @@ p span {
 
 .about-diffrence {
   position: relative;
+  margin-top: 164px;
   background-color: #fff;
-  padding-bottom: 3%;
 }
 .about-diffrence .about-main {
   display: flex;
@@ -13083,7 +13078,7 @@ p span {
   font-size: 26px;
   font-weight: 600;
 }
-.about-diffrence .about-main h1 {
+.about-diffrence .about-main .headH1 {
   color: #231f20;
   font-size: 64px;
   font-family: "metropolissemi_bold";
@@ -13107,8 +13102,7 @@ p span {
   bottom: 0px;
   top: 78%;
 }
-.about-diffrence h1 {
-  padding-top: 188px;
+.about-diffrence .headH1 {
   font-size: 64px;
   font-family: "metropolissemi_bold";
 }
@@ -13201,6 +13195,12 @@ p span {
   font-size: 16px;
 }
 
+.card-container .cardHeadingh2 {
+  font-family: "metropolissemi_bold";
+  font-size: 42px;
+  padding-top: 53px;
+}
+
 @media only screen and (max-width: 1280px) {
   .banner-top .bannerText {
     font-family: "Metropolis-Regular";
@@ -13215,12 +13215,6 @@ p span {
     padding-top: 20px;
   }
 }
-.card-container .cardHeadingh2 {
-  font-family: "metropolissemi_bold";
-  font-size: 42px;
-  padding-top: 53px;
-}
-
 @media only screen and (max-width: 992px) {
   .banner-top .bannerText {
     font-family: "Metropolis-Regular";

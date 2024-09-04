@@ -1,6 +1,5 @@
-.bg-color {
+.about-bg-color {
   background-color: #f2f8fd;
-  min-height: 800px;
 }
 
 .bannerImg {
@@ -68,6 +67,10 @@
     left: 0;
     right: 0;
     animation: jump 2s infinite linear;
+
+    img{
+      width: 100%;
+    }
   }
 }
 
@@ -202,14 +205,6 @@
     padding-top: 35px;
   }
 
-  .cardBlue,
-  .cardBlue-1,
-  .cardBlue-2,
-  .cardBlue-3 {
-    position: relative;
-    box-shadow: none;
-  }
-
   .cardBlue {
     background-color: #d1ebfc;
     height: 458px;
@@ -230,8 +225,6 @@
     z-index: 4;
     height: 458px;
   }
-
-  
 
   .cardHeadingh2 {
     font-family: "metropolissemi_bold";
@@ -257,8 +250,8 @@
 
 .about-diffrence {
   position: relative;
+  margin-top: 164px;
   background-color: #fff;
-  padding-bottom: 3%;
   .about-main {
     p {
       font-size: 16px;
@@ -272,7 +265,7 @@
       font-size: 26px;
       font-weight: 600;
     }
-    h1 {
+    .headH1 {
       color: #231f20;
       font-size: 64px;
       font-family: "metropolissemi_bold";
@@ -297,8 +290,7 @@
     bottom: 0px;
     top: 78%;
   }
-  h1 {
-    padding-top: 188px;
+  .headH1 {
     font-size: 64px;
     font-family: "metropolissemi_bold";
   }
@@ -392,15 +384,10 @@
   font-size: 16px;
 }
 
-// .logo {
-//     display: none;
-// }
-@media only screen and (max-width: 1440px) {
-  // .about-diffrence h1 {
-  //     padding-top: 0;
-  //     font-size: 64px;
-  //     font-family: "metropolissemi_bold";
-  // }
+.card-container .cardHeadingh2 {
+  font-family: "metropolissemi_bold";
+  font-size: 42px;
+  padding-top: 53px;
 }
 
 @media only screen and (max-width: 1280px) {
@@ -417,11 +404,7 @@
     padding-top: 20px;
   }
 }
-.card-container .cardHeadingh2 {
-  font-family: "metropolissemi_bold";
-  font-size: 42px;
-  padding-top: 53px;
-}
+
 
 @media only screen and (max-width: 992px) {
   .banner-top .bannerText {
