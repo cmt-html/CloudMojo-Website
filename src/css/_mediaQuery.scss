@@ -89,6 +89,10 @@
 
 
 
+/* Extra large devices (large desktops and above) */
+@media (min-width: 1441px) {
+  @import "./responsive/_only-desktop(min-1440).scss";
+}
 
 /* Extra large devices (large desktops and above) */
 @media (max-width: 1399.98px) {

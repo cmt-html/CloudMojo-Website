@@ -1,11 +1,8 @@
-// import { Inter } from "next/font/google";
-// import "./globals.scss";
 import "../css/globals.scss";
 
 import Header from "@/components/shared/Header";
 
 import Footer from "@/components/shared/Footer";
-import Head from "next/head";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -26,9 +23,11 @@ export default function RootLayout({ children }) {
         <meta name="theme-color" content="#ffffff"/>
       </head>
       <body>
-        <Header />
-        {children}
-        <Footer />
+        
+          <Header />
+          {children}
+          <Footer />
+        
       </body>
     </html>
   );

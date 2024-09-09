@@ -1,9 +1,10 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { gsap } from "gsap"; // Import GSAP
 import Link from "next/link";
 import { useGSAP } from "@gsap/react";
+import { MojoContext } from "./Context";
 
 const Header = () => {
   const [activeMenu, setActive] = useState(false);
@@ -71,6 +72,9 @@ const Header = () => {
     };
   }, [activeMenu]);
 
+
+  // const headerActiveToggle = useContext(MojoContext);
+
   return (
     <header
       className={`
@@ -78,6 +82,8 @@ const Header = () => {
         ${whiteLogo ? "logo-white" : ""}
         ${activeMenu ? "activeMenu" : ""}
       `}
+
+      
     >
       <div className="main-header">
         <div className="logo">

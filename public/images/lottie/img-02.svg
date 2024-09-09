@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 234.82 83.29">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e5e5e5;
+      }
+
+      .cls-2 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-3 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-4 {
+        fill: #303133;
+        font-family: Metropolis-Medium, Metropolis;
+        font-size: 18px;
+        font-weight: 500;
+      }
+
+      .cls-5 {
+        letter-spacing: -.02em;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M41.27,6.2h185.08v34.8c0,19.21-15.59,34.8-34.8,34.8H41.27c-19.21,0-34.8-15.59-34.8-34.8h0C6.47,21.79,22.07,6.2,41.27,6.2Z" transform="translate(232.83 81.99) rotate(-180)"/>
+  <text class="cls-4" transform="translate(73.51 35.27)"><tspan class="cls-5" x="0" y="0">T</tspan><tspan class="cls-3" x="11.03" y="0">w</tspan><tspan class="cls-2" x="25.34" y="0">o-Step </tspan><tspan class="cls-2"><tspan x="-29.32" y="21.6">E-Mandate Setup</tspan></tspan></text>
+</svg>

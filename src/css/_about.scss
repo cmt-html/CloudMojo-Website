@@ -66,7 +66,7 @@
     bottom: -230px;
     left: 0;
     right: 0;
-    animation: jump 2s infinite linear;
+    animation: jump 3s infinite linear;
 
     img{
       width: 100%;
@@ -197,12 +197,16 @@
 
 .card-container {
   padding-top: 100px;
-  // max-height: 458px;
-  // height:100% !important;
+  position: relative;
+  height: 100vh; /* Set height of the container */
   .mainCardHeading {
     font-family: "metropolissemi_bold";
     font-size: 92px;
     padding-top: 35px;
+  }
+
+  .cardb{
+    position: relative;
   }
 
   .cardBlue {
@@ -234,7 +238,7 @@
     text-align: left;
   }
   .cardPara {
-    float: left;
+    // float: left;
     font-family: "Metropolis-Regular" !important;
     font-size: 18px;
     padding-top: 62px;
@@ -388,6 +392,10 @@
   font-family: "metropolissemi_bold";
   font-size: 42px;
   padding-top: 53px;
+}
+
+.areas-of-expertise {
+  margin-bottom: 119px;
 }
 
 @media only screen and (max-width: 1280px) {

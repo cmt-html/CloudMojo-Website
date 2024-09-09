@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 234.82 84.24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e5e5e5;
+      }
+
+      .cls-2 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-3 {
+        fill: #303133;
+        font-family: Metropolis-Medium, Metropolis;
+        font-size: 18px;
+        font-weight: 500;
+      }
+
+      .cls-4 {
+        letter-spacing: -.02em;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M45.27,4.49h185.08v34.8c0,19.21-15.59,34.8-34.8,34.8H45.27c-19.21,0-34.8-15.59-34.8-34.8h0C10.47,20.08,26.06,4.49,45.27,4.49Z" transform="translate(240.82 78.57) rotate(-180)"/>
+  <text class="cls-3" transform="translate(46.05 33.55)"><tspan class="cls-4"><tspan x="0" y="0">Take Hassle-Free </tspan></tspan><tspan class="cls-2"><tspan x="27.87" y="21.6">Experience</tspan></tspan></text>
+</svg>

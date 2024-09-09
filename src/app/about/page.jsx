@@ -7,69 +7,40 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
-  const cardContainer = useRef(null);
-  const cardBlue = useRef(null);
-  const cardBlue1 = useRef(null);
-  const cardBlue2 = useRef(null);
-  const cardBlue3 = useRef(null);
-  const body = gsap.utils.selector("body");
+  const cardsRef = useRef([]);
+  const containerRef = useRef(null);
 
   useGSAP(() => {
-    const cardTl = gsap.timeline({
-      scrollTrigger: {
-        trigger: cardContainer.current,
-        pin: true,
-        scroller: document.body,
-        start: "top top",
-        end: "bottom top",
-        // markers: true,
-      },
+    const cards = cardsRef.current;
+    ScrollTrigger.create({
+      trigger: containerRef.current,
+      start: "top top",
+      end: `+=${cards.length * 400}`, // Adjust this value based on the animation length
+      pin: true, // This pins the container
+      scrub: 2, // Sync animations with the scroll
     });
 
-    cardTl
-      .to(cardBlue.current, {
-        translateY: 0,
-        boxShadow: "0px -2px 12px 0px #1C1C1C4D",
-        webkitFilter: "blur(1px);",
-        scrollTrigger: {
-          trigger: cardBlue.current,
-          start: "bottom bottom",
-          scrub: 2, // Smoothly animates based on scroll position
+    cards.forEach((card, index) => {
+      gsap.fromTo(
+        card,
+        {
+          y: 0,
         },
-      })
-      .to(cardBlue1.current, {
-        // y: "-80%",
-        translateY: "-80%",
-        boxShadow: "0px -2px 12px 0px #1C1C1C4D",
-        filter: "blur(.8px);",
-        scrollTrigger: {
-          trigger: cardBlue1.current,
-          start: "bottom bottom",
-          scrub: 2, // Smoothly animates based on scroll position
-        },
-      })
-      .to(cardBlue2.current, {
-        // y: "-162%",
-        translateY: "-162%",
-        boxShadow: "0px -2px 12px 0px #1C1C1C4D",
-        filter: "blur(.5px);",
-        scrollTrigger: {
-          trigger: cardBlue2.current,
-          start: "bottom bottom",
-          scrub: 2, // Smoothly animates based on scroll position
-        },
-      })
-      .to(cardBlue3.current, {
-        // y: "-244%",
-        translateY: "-244%",
-        boxShadow: "0px -2px 12px 0px #1C1C1C4D",
-        scrollTrigger: {
-          trigger: cardBlue3.current,
-          start: "bottom bottom",
-          scrub: 2, // Smoothly animates based on scroll position
-        },
-      });
-  });
+        {
+          y: -(index * card.offsetHeight * 0.7), // Move cards up by 70% of their height
+          ease: "none",
+          boxShadow: "rgba(28, 28, 28, 0.2) 0px -2px 8px 0px",
+          filter: "blur(0.8px);",
+          scrollTrigger: {
+            trigger: card,
+            start: "top center",
+            end: "top 200px",
+            scrub: 2,
+          },
+        }
+      );
+    });
+  }, []);
 
   return (
     <>
@@ -179,66 +150,76 @@ const About = () => {
         </div>
       </section>
 
-      <section className="about-bg-color" ref={cardContainer}>
-        <div className="card-container">
-          <div className="cardBlue cardb" ref={cardBlue}>
-            <div className="container">
-              <h2 className="mainCardHeading">Our Values</h2>
-            </div>
+      <section className="about-bg-color card-container" ref={containerRef}>
+        <div
+          className="cardBlue cardb"
+          ref={(el) => (cardsRef.current[0] = el)}
+        >
+          <div className="container">
+            <h2 className="mainCardHeading">Our Values</h2>
           </div>
-          <div className="cardBlue-1 cardb" ref={cardBlue1}>
-            <div className="container">
-              <div className="row">
-                <div className="col-md-5 d-flex">
-                  <h2 className="cardHeading mainCardHeading cardno">01</h2>
-                  <h2 className="cardHeadingh2">Innovation</h2>
-                </div>
-                <div className="col-md-6">
-                  <p className="cardPara">
-                    We thrive on extending the boundaries of what's possible.
-                    Our team of experts combines a passion for innovation with a
-                    deep understanding of industry challenges, delivering
-                    solutions that fit your needs.
-                  </p>
-                </div>
+        </div>
+        <div
+          className="cardBlue-1 cardb"
+          ref={(el) => (cardsRef.current[1] = el)}
+        >
+          <div className="container">
+            <div className="row">
+              <div className="col-md-5 d-flex">
+                <h2 className="cardHeading mainCardHeading cardno">01</h2>
+                <h2 className="cardHeadingh2">Innovation</h2>
+              </div>
+              <div className="col-md-6">
+                <p className="cardPara">
+                  We thrive on extending the boundaries of what's possible. Our
+                  team of experts combines a passion for innovation with a deep
+                  understanding of industry challenges, delivering solutions
+                  that fit your needs.
+                </p>
               </div>
             </div>
           </div>
-          <div className="cardBlue-2 cardb" ref={cardBlue2}>
-            <div className="container">
-              <div className="row">
-                <div className="col-md-5 d-flex">
-                  <h2 className="cardHeading mainCardHeading cardno">02</h2>
-                  <h2 className="cardHeadingh2">AI Expertise</h2>
-                </div>
-                <div className="col-md-6">
-                  <p className="cardPara">
-                    Harnessing the power of artificial intelligence, we bring
-                    you SaaS products that not only solve today's problems but
-                    also anticipate and adapt to the challenges of tomorrow. Our
-                    AI-driven approach ensures that your business stays ahead in
-                    the ever-evolving digital landscape.
-                  </p>
-                </div>
+        </div>
+        <div
+          className="cardBlue-2 cardb"
+          ref={(el) => (cardsRef.current[2] = el)}
+        >
+          <div className="container">
+            <div className="row">
+              <div className="col-md-5 d-flex">
+                <h2 className="cardHeading mainCardHeading cardno">02</h2>
+                <h2 className="cardHeadingh2">AI Expertise</h2>
+              </div>
+              <div className="col-md-6">
+                <p className="cardPara">
+                  Harnessing the power of artificial intelligence, we bring you
+                  SaaS products that not only solve today's problems but also
+                  anticipate and adapt to the challenges of tomorrow. Our
+                  AI-driven approach ensures that your business stays ahead in
+                  the ever-evolving digital landscape.
+                </p>
               </div>
             </div>
           </div>
-          <div className="cardBlue-3 cardb" ref={cardBlue3}>
-            <div className="container">
-              <div className="row">
-                <div className="col-md-5 d-flex">
-                  <h2 className="cardHeading mainCardHeading cardno">03</h2>
-                  <h2 className="cardHeadingh2">Customer-Centric Focus</h2>
-                </div>
-                <div className="col-md-6">
-                  <p className="cardPara">
-                    Your success is our success. We are committed to
-                    understanding your unique requirements and tailoring our
-                    solutions to fit seamlessly into your workflow. Our
-                    customer-centric approach ensures that you receive not just
-                    a product, but a partnership geared towards your growth.
-                  </p>
-                </div>
+        </div>
+        <div
+          className="cardBlue-3 cardb"
+          ref={(el) => (cardsRef.current[3] = el)}
+        >
+          <div className="container">
+            <div className="row">
+              <div className="col-md-5 d-flex">
+                <h2 className="cardHeading mainCardHeading cardno">03</h2>
+                <h2 className="cardHeadingh2">Customer-Centric Focus</h2>
+              </div>
+              <div className="col-md-6">
+                <p className="cardPara">
+                  Your success is our success. We are committed to understanding
+                  your unique requirements and tailoring our solutions to fit
+                  seamlessly into your workflow. Our customer-centric approach
+                  ensures that you receive not just a product, but a partnership
+                  geared towards your growth.
+                </p>
               </div>
             </div>
           </div>
@@ -329,7 +310,7 @@ const About = () => {
         </div>
       </section>
 
-      <section>
+      <section className="areas-of-expertise">
         <div className="bg-color-white">
           <div className="container  ">
             <div className="aboutText ">

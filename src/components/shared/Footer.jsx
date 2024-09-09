@@ -1,37 +1,75 @@
-import React from "react";
+"use client"
+import React, { useRef } from "react";
 import Link from "next/link";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+
+
+
+
+
+
+
 const Footer = () => {
+
+  const contacts = useRef(null);
+
+
+  useGSAP(
+    () => {
+      gsap.to(".rightArrow", {
+        width: "100%",
+        duration:2,
+        scrollTrigger: {
+          trigger: ".rightArrow",
+          scroller: "body",
+          scrub: false,
+          start:"bottom bottom"
+        },
+      });
+    },{scope:contacts.current});
+
+
+
+
   return (
     <footer>
       <div className="footer">
         <div className="container">
-          <div className="row">
-            <div className="col-md-7">
-              <h1>
-                We would love to<br></br> hear from you!
-              </h1>
-            </div>
-            <div className=" col-md-5">
-              <button className="button get-in-toch-button">
-                Get in touch
-                <span>
-                  <img src="./images/arrow-footer-button.png" />
-                </span>
-              </button>
+          <div className="foo-heading">
+            <div className="row">
+              <div className="col-md-7">
+                <h2>We would love to hear from you!</h2>
+              </div>
+              <div className=" col-md-5">
+                <button className="button get-in-toch-button">
+                  Get in touch
+                  <span>
+                    <img src="./images/arrow-footer-button.png" />
+                  </span>
+                </button>
+              </div>
             </div>
           </div>
 
-          <div className="contacts">
+          <div className="contacts" ref={contacts}>
             <div className="row">
               <div className="col-md-6">
                 <p>Email</p>
-                <span className="emailId">mojo@cloudmojo.tech</span>
+                <Link href={"mailto:mojo@cloudmojo.tech"}>
+                  <span className="emailId">mojo@cloudmojo.tech</span>
+                </Link>
               </div>
               <div className="col-md-6 fotter-text-right">
                 <p>Call</p>
-                <span className="mobileNo">+91 91679 97777</span>
+                <Link href={"tel:+91 91679 97777"}>
+                  <span className="mobileNo">+91 91679 97777</span>
+                </Link>
               </div>
             </div>
+
+            <span className="top-sap-line rightArrow"></span>
+            <span className="bottom-sap-line rightArrow"></span>
           </div>
         </div>
 
@@ -57,7 +95,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="container bottom-footer ">
+          <div className="bottom-footer ">
             <div className="row">
               <div className="top-to-bottom">
                 <Link href="#top">
@@ -69,7 +107,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="container p-0">
+            <div className="p-0">
               <div className="row footer-social-iocn">
                 <div className="col-md-6">
                   <img src="./images/CMT-Logo.png" />
@@ -150,7 +188,8 @@ const Footer = () => {
                     </div>
                     <div className="col-md-5 copy-right">
                       <p>
-                        © 2024 CloudMojo Tech Pvt. Ltd. All rights reserved.
+                        &copy; 2024 CloudMojo Tech Pvt. Ltd. All rights
+                        reserved.
                       </p>
                     </div>
                   </div>
