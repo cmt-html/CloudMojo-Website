@@ -1,36 +1,35 @@
-"use client"
+"use client";
 import React, { useRef } from "react";
 import Link from "next/link";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
 
-
-
-
-
+import { FaWhatsapp } from "react-icons/fa";
+import { BsTwitterX } from "react-icons/bs";
+import { FaLinkedinIn } from "react-icons/fa6";
+import { FaFacebookF } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
-
   const contacts = useRef(null);
-
 
   useGSAP(
     () => {
       gsap.to(".rightArrow", {
         width: "100%",
-        duration:2,
+        duration: 2,
         scrollTrigger: {
           trigger: ".rightArrow",
           scroller: "body",
           scrub: false,
-          start:"bottom bottom"
+          start: "bottom bottom",
         },
       });
-    },{scope:contacts.current});
-
-
-
+    },
+    { scope: contacts.current }
+  );
 
   return (
     <footer>
@@ -116,32 +115,44 @@ const Footer = () => {
                   <ul>
                     <li>
                       <Link href="#">
-                        <span className="whats-app"></span>
+                        <span className="whats-app">
+                          <FaWhatsapp />
+                        </span>
                       </Link>
                     </li>
                     <li>
                       <Link href="#">
-                        <span className="twitter"></span>
+                        <span className="twitter">
+                          <BsTwitterX />
+                        </span>
                       </Link>
                     </li>
                     <li>
                       <Link href="#">
-                        <span className="linkedin"></span>
+                        <span className="linkedin">
+                          <FaLinkedinIn />
+                        </span>
                       </Link>
                     </li>
                     <li>
                       <Link href="#">
-                        <span className="facebook"></span>
+                        <span className="facebook">
+                          <FaFacebookF />
+                        </span>
                       </Link>
                     </li>
                     <li>
                       <Link href="#">
-                        <span className="instagram"></span>
+                        <span className="instagram">
+                          <FaInstagram />
+                        </span>
                       </Link>
                     </li>
                     <li>
                       <Link href="#">
-                        <span className="youtube"></span>
+                        <span className="youtube">
+                          <FaYoutube />
+                        </span>
                       </Link>
                     </li>
                   </ul>

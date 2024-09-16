@@ -12430,41 +12430,31 @@ footer .contacts .bottom-sap-line.rightArrow {
   list-style-type: none;
   display: inline-block;
 }
-.footer-bg .footer-social-iocn .social-icon ul li .whats-app {
-  background: url("/images/whatsappicon.png") no-repeat;
+.footer-bg .footer-social-iocn .social-icon ul li a {
+  display: inline-block;
   width: 38px;
   height: 38px;
-  display: inline-block;
+  border-radius: 50%;
+  position: relative;
 }
-.footer-bg .footer-social-iocn .social-icon ul li .twitter {
-  background: url("/images/twittericon.png") no-repeat;
-  width: 38px;
-  display: inline-block;
-  height: 38px;
+.footer-bg .footer-social-iocn .social-icon ul li a span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
-.footer-bg .footer-social-iocn .social-icon ul li .linkedin {
-  background: url("/images/linkedinicon.png") no-repeat;
-  width: 38px;
-  display: inline-block;
-  height: 38px;
-}
-.footer-bg .footer-social-iocn .social-icon ul li .facebook {
-  background: url("/images/facebookicon.png") no-repeat;
-  width: 38px;
-  height: 38px;
-  display: inline-block;
-}
-.footer-bg .footer-social-iocn .social-icon ul li .instagram {
-  background: url("/images/instagramicon.png") no-repeat;
-  width: 38px;
-  height: 38px;
-  display: inline-block;
-}
-.footer-bg .footer-social-iocn .social-icon ul li .youtube {
-  background: url("/images/youtubeicon.png") no-repeat;
-  width: 38px;
-  height: 38px;
-  display: inline-block;
+.footer-bg .footer-social-iocn .social-icon ul li a span svg {
+  width: 100%;
+  height: 100%;
+  padding: 6px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 .footer-bg .footer-social-iocn .social-icon ul li a {
   text-decoration: none;
@@ -12506,6 +12496,37 @@ footer .contacts .bottom-sap-line.rightArrow {
   color: #fff;
 }
 
+/* The container for the button */
+.button-container {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom right, #87cefa, #6ab7ff); /* Background color similar to image */
+  border-radius: 50%;
+}
+
+/* Circular border with rotating gradient */
+.button-svg {
+  width: 100px;
+  height: 100px;
+}
+
+.gradient-circle {
+  animation: rotateGradient 4s infinite linear;
+}
+
+/* Rotate gradient 720 degrees */
+@keyframes rotateGradient {
+  0% {
+    stroke-dasharray: 0 100;
+    stroke: url(#gradient);
+  }
+  100% {
+    transform: rotate(720deg);
+  }
+}
 * {
   margin: 0;
   padding: 0;

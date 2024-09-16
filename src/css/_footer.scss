@@ -151,45 +151,55 @@ footer {
         display: flex;
         justify-content: end;
         li {
+          a {
+            display: inline-block;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            position: relative;
+
+            span{
+              position: relative;
+              display: block;
+              width: 100%;
+              height: 100%;
+
+              svg {
+              // fill: transparent;
+              width: 100%;
+              height: 100%;
+              padding: 6px;
+              border: 1px solid #fff;
+              border-radius: 50%;
+              position: absolute;
+                left: 0;
+                top: 0;
+              z-index: 2;
+              // color: transparent;
+                background-clip: text;
+                -webkit-background-clip: text;
+             
+            }
+
+              // &::after {
+              //   content: "";
+              //   width: 100%;
+              //   height: 100%;
+              //   position: absolute;
+              //   left: 0;
+              //   top: 0;
+              //   background-image: linear-gradient(to right, transparent, #013ee6);
+              //   border-radius: 50%;
+              //   z-index: 1;
+              // }
+            }
+
+            
+          }
           padding: 0px 13px;
           list-style-type: none;
           display: inline-block;
-          .whats-app {
-            background: url("/images/whatsappicon.png") no-repeat;
-            width: 38px;
-            height: 38px;
-            display: inline-block;
-          }
-          .twitter {
-            background: url("/images/twittericon.png") no-repeat;
-            width: 38px;
-            display: inline-block;
-            height: 38px;
-          }
-          .linkedin {
-            background: url("/images/linkedinicon.png") no-repeat;
-            width: 38px;
-            display: inline-block;
-            height: 38px;
-          }
-          .facebook {
-            background: url("/images/facebookicon.png") no-repeat;
-            width: 38px;
-            height: 38px;
-            display: inline-block;
-          }
-          .instagram {
-            background: url("/images/instagramicon.png") no-repeat;
-            width: 38px;
-            height: 38px;
-            display: inline-block;
-          }
-          .youtube {
-            background: url("/images/youtubeicon.png") no-repeat;
-            width: 38px;
-            height: 38px;
-            display: inline-block;
-          }
+          
           a {
             text-decoration: none;
             color: #fff;
@@ -238,5 +248,40 @@ footer {
     font-size: 18px;
     text-align: right;
     color: #fff;
+  }
+}
+
+
+
+
+/* The container for the button */
+.button-container {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom right, #87cefa, #6ab7ff); /* Background color similar to image */
+  border-radius: 50%;
+}
+
+/* Circular border with rotating gradient */
+.button-svg {
+  width: 100px;
+  height: 100px;
+}
+
+.gradient-circle {
+  animation: rotateGradient 4s infinite linear;
+}
+
+/* Rotate gradient 720 degrees */
+@keyframes rotateGradient {
+  0% {
+    stroke-dasharray: 0 100;
+    stroke: url(#gradient);
+  }
+  100% {
+    transform: rotate(720deg);
   }
 }
